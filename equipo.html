@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Gestión de equipo — Mi Local Sushi</title>
+<meta name="description" content="Registra trabajadores, asigna roles y controla accesos. Cada persona ve solo lo que necesita ver.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var t=localStorage.getItem("mls-theme")||"dark";if(t==="light")document.documentElement.classList.add("pre-light");})();</script>
+</head>
+<body>
+<!-- PRELOADER -->
+<div id="pre"><div class="pre-logo"><div class="pre-logo-dot"></div>Mi Local Sushi</div><div class="pre-bar"><div class="pre-fill"></div></div></div>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-theme-row">
+    <span class="mob-theme-label">Modo oscuro / claro</span>
+    <button id="theme-btn-mob" class="theme-toggle" aria-label="Cambiar tema" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--brd3);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path class="icon-moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <g class="icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+      </svg>
+    </button>
+  </div>
+  <a href="index.html" onclick="closeMob()">Inicio</a>
+  <a href="funciones.html" onclick="closeMob()">Funciones</a>
+  <a href="pedidos.html" onclick="closeMob()">Pedidos</a>
+  <a href="cocina.html" onclick="closeMob()">Cocina</a>
+  <a href="equipo.html" onclick="closeMob()">Equipo</a>
+  <a href="planes.html" onclick="closeMob()">Planes</a>
+  <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="mc">Iniciar sesión →</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="W"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="lm"><svg viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" fill="none" stroke="white" stroke-width="1.5"/><path d="M5 9 Q9 5 13 9 Q9 13 5 9Z" fill="white"/></svg></div>
+      Mi Local Sushi
+    </a>
+    <div class="nav-links">
+      <a href="funciones.html" class="nl">Funciones</a>
+      <a href="pedidos.html" class="nl">Pedidos</a>
+      <a href="cocina.html" class="nl">Cocina</a>
+      <a href="equipo.html" class="nl">Equipo</a>
+      <a href="planes.html" class="nl">Planes</a>
+    </div>
+    <button id="theme-btn" class="theme-toggle" aria-label="Cambiar tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path class="icon-moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <g class="icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+      </svg>
+    </button>
+    <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="nav-cta">
+      Iniciar sesión
+      <svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+    </a>
+    <div class="burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div></div>
+</nav>
+
+<section class="pg-hero">
+  <div class="h-grid" style="opacity:.3"></div><div class="pg-glow"></div>
+  <div class="W" style="position:relative;z-index:1">
+    <div class="rv">
+      <div class="pg-bc"><a href="index.html">Inicio</a><span>/</span><a href="funciones.html">Funciones</a><span>/</span><span style="color:rgba(255,255,255,.7)">Equipo</span></div>
+      <div class="h-badge" style="margin-bottom:22px"><div class="h-badge-dot"></div>Equipo</div>
+      <h1 class="pg-h1">Tu equipo,<br><em>organizado.</em></h1>
+      <p class="pg-p">Registra trabajadores, asigna roles y controla accesos. Cada persona ve solo lo que necesita ver.</p>
+      <div class="pg-btns">
+        <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btn-primary">Empezar gratis <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="planes.html" class="btn-ghost">Ver planes</a>
+      </div>
+      <div class="pg-stats">
+        <div><div class="pstat-n">100<span>%</span></div><div class="pstat-l">Control de accesos</div></div>
+        <div><div class="pstat-n">5<span>+</span></div><div class="pstat-l">Tipos de roles disponibles</div></div>
+        <div><div class="pstat-n">1<span></span></div><div class="pstat-l">Panel para todo el equipo</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg0)">
+  <div class="W">
+    <div class="cr rv">
+      <div>
+        <div class="ey">Vista en vivo</div>
+        <h2 class="sh2">Diseñado para el<br><em>ritmo del restaurante</em></h2>
+        <p class="sp">Interfaz clara y rápida. Cualquier miembro del equipo la usa desde el primer día, sin capacitación previa.</p>
+        <div class="cr-bullets">
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Sin curva de aprendizaje</div><div class="crb-desc">Tu equipo opera con confianza desde el primer turno. Interfaz intuitiva sin manuales.</div></div></div>
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Optimizada para tablet</div><div class="crb-desc">Contraste alto y texto legible en cualquier condición de luz del local.</div></div></div>
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Actualización instantánea</div><div class="crb-desc">Sin recargar la página. Todo cambia en tiempo real para todo el equipo.</div></div></div>
+        </div>
+      </div>
+      <div class="cr-img rv d2">
+        <!-- Reemplaza con: <img src="img/equipo-tablet.jpg" alt="Gestión de equipo"> -->
+        <div class="ss"><div class="ss-ph"><svg viewBox="0 0 48 48"><rect x="8" y="4" width="32" height="40" rx="3"/><line x1="16" y1="14" x2="32" y2="14"/><line x1="16" y1="22" x2="32" y2="22"/><line x1="16" y1="30" x2="24" y2="30"/></svg><p>Coloca aquí screenshot<br>de Gestión de equipo en tablet</p></div></div>
+      </div>
+    </div>
+    <div class="cr flip rv">
+      <div>
+        <div class="ey">Historial y control</div>
+        <h2 class="sh2">Todo queda<br><em>registrado</em></h2>
+        <p class="sp">Accede al historial completo con filtros por fecha, estado o responsable. Ideal para revisar, analizar y mejorar.</p>
+        <div class="cr-bullets">
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Filtros avanzados</div><div class="crb-desc">Busca por fecha, responsable, estado o canal con un clic.</div></div></div>
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Exportación de datos</div><div class="crb-desc">Descarga reportes para contabilidad o análisis externo.</div></div></div>
+          <div class="crb"><div class="crb-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><div><div class="crb-title">Auditoría completa</div><div class="crb-desc">Cada acción registrada con hora exacta y responsable.</div></div></div>
+        </div>
+      </div>
+      <div class="cr-img rv d2">
+        <!-- Reemplaza con: <img src="img/equipo-historial.jpg" alt="Historial Gestión de equipo"> -->
+        <div class="ss"><div class="ss-ph"><svg viewBox="0 0 48 48"><polyline points="4,38 12,24 20,30 30,16 38,22 44,12"/><line x1="4" y1="44" x2="44" y2="44"/></svg><p>Coloca aquí screenshot<br>del historial y reportes</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg1);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd)">
+  <div class="W">
+    <div class="ctr rv"><div class="ey">Testimonios</div><h2 class="sh2">Lo que dicen<br><em>nuestros clientes</em></h2></div>
+    <div class="tg">
+      <div class="tc rv d1"><div class="ts">★★★★★</div><p class="tq">"Increíble el cambio que generó en nuestra operación. El equipo trabaja mucho más coordinado."</p><div class="ta"><div class="tav" style="background:#7f77dd">CR</div><div><div class="tn">Carlos Ramírez</div><div class="tr">Sushi Nakama</div></div></div></div>
+      <div class="tc rv d2"><div class="ts">★★★★★</div><p class="tq">"En menos de un día teníamos todo configurado. El equipo operaba sin problemas desde el primer turno."</p><div class="ta"><div class="tav" style="background:#d85a30">MG</div><div><div class="tn">Mario González</div><div class="tr">Rolls &amp; Co.</div></div></div></div>
+      <div class="tc rv d3"><div class="ts">★★★★★</div><p class="tq">"Lo mejor fue la velocidad de implementación. Desde el primer turno todo funcionó perfecto."</p><div class="ta"><div class="tav" style="background:#1d9e75">LP</div><div><div class="tn">Laura Pereira</div><div class="tr">Temaki House</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="cta-bg"></div>
+  <div class="W"><div class="cta-in rv">
+    <div class="cta-tag"><div style="width:6px;height:6px;border-radius:50%;background:var(--g);animation:blinkdot 2s infinite"></div>Plan gratuito disponible</div>
+    <h2 class="cta-h2">Pruébalo gratis<br><em>hoy mismo.</em></h2>
+    <p class="cta-p">Sin tarjeta de crédito, sin contrato. Configura en minutos.</p>
+    <div class="cta-btns">
+      <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btn-primary" style="font-size:16px;padding:15px 32px">Crear cuenta gratis <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="planes.html" class="btn-ghost" style="font-size:16px;padding:15px 28px">Ver Ver planes →</a>
+    </div>
+    <div class="cta-legal"><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Sin tarjeta</span><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Sin contrato</span><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Cancela cuando quieras</span></div>
+  </div></div>
+</section>
+
+<footer><div class="W"><div class="fg"><div><div class="fl"><div class="lm"><svg viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" fill="none" stroke="white" stroke-width="1.5"/><path d="M5 9 Q9 5 13 9 Q9 13 5 9Z" fill="white"/></svg></div>Mi Local Sushi</div><p class="fd">Software de gestión para restaurantes chilenos.</p><div class="fct"><span>contacto@milocalsushi.cl</span></div></div><div class="fcol"><h5>Plataforma</h5><a href="funciones.html">Funciones</a><a href="pedidos.html">Pedidos</a><a href="cocina.html">Cocina</a><a href="equipo.html">Equipo</a><a href="planes.html">Planes</a></div><div class="fcol"><h5>Legal</h5><a href="#">Términos</a><a href="#">Privacidad</a></div><div class="fcol"><h5>Newsletter</h5><p class="nl-lbl">Novedades de la plataforma.</p><div class="nl-f"><input type="email" placeholder="tu@correo.cl"><button type="button">Suscribir</button></div></div></div><div class="fbot"><span class="fcp">© 2026 Mi Local Sushi 🇨🇱</span><div class="fsoc"><div class="fs">IG</div><div class="fs">FB</div><div class="fs">in</div></div></div></div></footer>
+<script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Planes y precios — Mi Local Sushi</title>
+<meta name="description" content="Planes desde gratis. Sin contratos, sin sorpresas. Elige el ideal para tu restaurante.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var t=localStorage.getItem("mls-theme")||"dark";if(t==="light")document.documentElement.classList.add("pre-light");})();</script>
+</head>
+<body>
+<!-- PRELOADER -->
+<div id="pre"><div class="pre-logo"><div class="pre-logo-dot"></div>Mi Local Sushi</div><div class="pre-bar"><div class="pre-fill"></div></div></div>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-theme-row">
+    <span class="mob-theme-label">Modo oscuro / claro</span>
+    <button id="theme-btn-mob" class="theme-toggle" aria-label="Cambiar tema" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--brd3);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path class="icon-moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <g class="icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+      </svg>
+    </button>
+  </div>
+  <a href="index.html" onclick="closeMob()">Inicio</a>
+  <a href="funciones.html" onclick="closeMob()">Funciones</a>
+  <a href="pedidos.html" onclick="closeMob()">Pedidos</a>
+  <a href="cocina.html" onclick="closeMob()">Cocina</a>
+  <a href="equipo.html" onclick="closeMob()">Equipo</a>
+  <a href="planes.html" onclick="closeMob()">Planes</a>
+  <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="mc">Iniciar sesión →</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="W"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="lm"><svg viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" fill="none" stroke="white" stroke-width="1.5"/><path d="M5 9 Q9 5 13 9 Q9 13 5 9Z" fill="white"/></svg></div>
+      Mi Local Sushi
+    </a>
+    <div class="nav-links">
+      <a href="funciones.html" class="nl">Funciones</a>
+      <a href="pedidos.html" class="nl">Pedidos</a>
+      <a href="cocina.html" class="nl">Cocina</a>
+      <a href="equipo.html" class="nl">Equipo</a>
+      <a href="planes.html" class="nl">Planes</a>
+    </div>
+    <button id="theme-btn" class="theme-toggle" aria-label="Cambiar tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path class="icon-moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <g class="icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+      </svg>
+    </button>
+    <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="nav-cta">
+      Iniciar sesión
+      <svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+    </a>
+    <div class="burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div></div>
+</nav>
+
+<section class="pg-hero" style="text-align:center;padding-bottom:0">
+  <div class="h-grid" style="opacity:.3"></div><div class="pg-glow"></div>
+  <div class="W" style="position:relative;z-index:1">
+    <div class="rv" style="max-width:660px;margin:0 auto;padding-bottom:60px">
+      <div class="h-badge" style="justify-content:center;margin-bottom:22px"><div class="h-badge-dot"></div>Precios transparentes</div>
+      <h1 class="pg-h1">El plan ideal para<br><em>cada restaurante</em></h1>
+      <p class="pg-p" style="margin:0 auto">Empieza gratis y crece cuando lo necesites. Sin contratos, sin sorpresas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg1);border-top:1px solid var(--brd)">
+  <div class="W">
+    <div class="tog-row rv">
+      <span class="tog-lbl">Mensual</span>
+      <div class="tog-t" id="togT"><div class="tog-th"></div></div>
+      <span class="tog-lbl">Anual</span>
+      <span class="tog-save">2 meses gratis</span>
+    </div>
+    <div class="plans rv d1">
+      <div class="plan"><div class="ph"><div class="pname">Free</div><div class="pprice"><span class="pcur">$</span><span class="pamt" data-m="0" data-a="0">0</span></div><div class="pper">para siempre</div><div class="pann">Para comenzar sin riesgo</div></div><div class="pb"><ul class="pfeats"><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>4</strong> trabajadores</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>5</strong> clientes</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Gestión básica de pedidos</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Panel de administración</span></li></ul><a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btnpl">Comenzar gratis</a></div></div>
+      <div class="plan"><div class="ph"><div class="pname">Básico</div><div class="pprice"><span class="pcur">$</span><span class="pamt" data-m="12.000" data-a="10.000">12.000</span></div><div class="pper">Mensual</div><div class="pann">$132.000 al año</div></div><div class="pb"><ul class="pfeats"><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>10</strong> trabajadores</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>100</strong> clientes</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Panel de cocina</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Gestión completa de pedidos</span></li></ul><a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btnpl">Elegir plan</a></div></div>
+      <div class="plan ft"><div class="ph"><div class="pbadge">Más popular</div><div class="pname">Pyme</div><div class="pprice"><span class="pcur">$</span><span class="pamt" data-m="25.000" data-a="21.000">25.000</span></div><div class="pper">Mensual</div><div class="pann">$275.000 al año</div></div><div class="pb"><ul class="pfeats"><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>30</strong> trabajadores</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>300</strong> clientes</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Métricas de ventas</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Gestión de turnos</span></li></ul><a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btnpf">Elegir Pyme</a></div></div>
+      <div class="plan"><div class="ph"><div class="pname">Pro</div><div class="pprice"><span class="pcur">$</span><span class="pamt" data-m="45.000" data-a="38.000">45.000</span></div><div class="pper">Mensual</div><div class="pann">$495.000 al año</div></div><div class="pb"><ul class="pfeats"><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>60</strong> trabajadores</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span><strong>800</strong> clientes</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Panel avanzado de cocina</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Reportes completos</span></li></ul><a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btnpl">Elegir plan</a></div></div>
+      <div class="plan"><div class="ph"><div class="pname">Ilimitado</div><div class="pprice"><span class="pcur">$</span><span class="pamt" data-m="79.000" data-a="66.000">79.000</span></div><div class="pper">Mensual</div><div class="pann">$869.000 al año</div></div><div class="pb"><ul class="pfeats"><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Trabajadores <strong>ilimitados</strong></span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Clientes <strong>ilimitados</strong></span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Gestión completa</span></li><li class="pf"><div class="pf-ck"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></div><span>Reportes totales</span></li></ul><a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btnpl">Elegir plan</a></div></div>
+    </div>
+    <p class="p-note rv">* Todos los valores no incluyen IVA.</p>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg0);border-top:1px solid var(--brd)">
+  <div class="W">
+    <div class="ctr rv"><div class="ey">FAQ Planes</div><h2 class="sh2">Preguntas sobre<br><em>los planes</em></h2></div>
+    <div class="faq-l" style="margin-top:52px">
+      <div class="rv">
+        <h3 style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--t1);margin-bottom:12px">¿Dudas?</h3>
+        <p style="font-size:15px;color:var(--t3);line-height:1.65;margin-bottom:22px">Si no encuentras lo que buscas, escríbenos. Respondemos en el mismo día.</p>
+        <a href="mailto:contacto@milocalsushi.cl" class="btn-primary">Contactarnos →</a>
+      </div>
+      <div class="facc rv d1">
+        <div class="fi open"><div class="fq">¿Puedo cambiar de plan cuando quiera?<div class="farr"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div></div><div class="fa">Sí. Puedes subir o bajar de plan en cualquier momento. Sin contratos forzosos ni penalidades.</div></div>
+        <div class="fi"><div class="fq">¿El plan Free tiene fecha de caducidad?<div class="farr"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div></div><div class="fa">No. El plan Free es permanente. Puedes usarlo indefinidamente dentro de sus límites.</div></div>
+        <div class="fi"><div class="fq">¿Los precios incluyen IVA?<div class="farr"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div></div><div class="fa">No. Los precios indicados no incluyen IVA. El monto final depende de tu situación tributaria.</div></div>
+        <div class="fi"><div class="fq">¿Hay descuento por pago anual?<div class="farr"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div></div><div class="fa">Sí. Al pagar anualmente obtienes 2 meses gratis, equivalente a un 16% de descuento.</div></div>
+        <div class="fi"><div class="fq">¿Cómo funciona el pago?<div class="farr"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div></div><div class="fa">Los pagos se procesan de forma segura. Recibirás un comprobante por correo con cada cobro.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="cta-bg"></div>
+  <div class="W"><div class="cta-in rv">
+    <div class="cta-tag"><div style="width:6px;height:6px;border-radius:50%;background:var(--g);animation:blinkdot 2s infinite"></div>Empieza hoy gratis</div>
+    <h2 class="cta-h2">Sin excusas para<br><em>digitalizar tu local.</em></h2>
+    <p class="cta-p">Plan gratuito disponible ahora mismo. Sin tarjeta, sin contrato.</p>
+    <div class="cta-btns">
+      <a href="https://milocalsushi.onrender.com/authentication/login" target="_blank" class="btn-primary" style="font-size:16px;padding:15px 32px">Crear cuenta gratis <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="funciones.html" class="btn-ghost" style="font-size:16px;padding:15px 28px">Ver funciones →</a>
+    </div>
+    <div class="cta-legal"><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Sin tarjeta</span><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Sin contrato</span><span><svg viewBox="0 0 14 14"><polyline points="1.5,7 5,10.5 12.5,3"/></svg>Cancela cuando quieras</span></div>
+  </div></div>
+</section>
+<footer><div class="W"><div class="fg"><div><div class="fl"><div class="lm"><svg viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" fill="none" stroke="white" stroke-width="1.5"/><path d="M5 9 Q9 5 13 9 Q9 13 5 9Z" fill="white"/></svg></div>Mi Local Sushi</div><p class="fd">Software de gestión para restaurantes chilenos.</p><div class="fct"><span>contacto@milocalsushi.cl</span></div></div><div class="fcol"><h5>Plataforma</h5><a href="funciones.html">Funciones</a><a href="pedidos.html">Pedidos</a><a href="cocina.html">Cocina</a><a href="equipo.html">Equipo</a><a href="planes.html">Planes</a></div><div class="fcol"><h5>Legal</h5><a href="#">Términos</a><a href="#">Privacidad</a></div><div class="fcol"><h5>Newsletter</h5><p class="nl-lbl">Novedades de la plataforma.</p><div class="nl-f"><input type="email" placeholder="tu@correo.cl"><button type="button">Suscribir</button></div></div></div><div class="fbot"><span class="fcp">© 2026 Mi Local Sushi 🇨🇱</span><div class="fsoc"><div class="fs">IG</div><div class="fs">FB</div><div class="fs">in</div></div></div></div></footer><script src="shared.js"></script></body></html>
