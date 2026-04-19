@@ -384,43 +384,81 @@ body.light #nav:not(.solid) .nl:hover {
    height: 14px
 }
 
-.burger {
+.menu-btn {
    display: none;
-   flex-direction: column;
-   gap: 5px;
-   cursor: pointer;
-   padding: 8px;
-   flex-shrink: 0
+   margin-left: auto; /* 🔥 ocupa el lugar del burger */
+   z-index: 810;
 }
 
-.burger span {
-   display: block;
-   width: 22px;
-   height: 1.5px;
-   border-radius: 2px;
-   transition: all .3s;
-   background: var(--t2)
-}
-
-body.light #nav:not(.solid) .burger span {
-   background: #fff
-}
-
-.burger {
+.menu-btn input {
    display: none;
-   flex-direction: column;
-   gap: 5px;
-   cursor: pointer;
-   padding: 8px;
-   flex-shrink: 0;
+}
 
-   margin-left: auto;
-   /* 👈 ESTO LO ARREGLA */
+.menu-btn label {
+   width: 38px;
+   height: 38px;
+   border-radius: 999px;
+
+   background: var(--gl);          /* fondo verde suave */
+   border: 1px solid var(--gl2);  /* borde verde */
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.menu-btn svg {
+   width: 100%;
+   height: 100%;
+}
+/* BASE */
+.line {
+   fill: none;
+   stroke: var(--g); /* 🔥 VERDE SIEMPRE */
+   stroke-width: 3.2;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+
+   stroke-dasharray: 24 126.64;
+   stroke-dashoffset: -38;
+   transition: all .6s cubic-bezier(.4,0,.2,1);
+}
+
+.menu-btn label {
+   box-shadow: 0 0 0 1px var(--gl2), 0 4px 14px rgba(0,0,0,.25);
+   transition: all .25s ease;
+}
+
+.menu-btn:hover label {
+   background: var(--gl2);
+   box-shadow: 0 0 0 1px var(--g), 0 6px 18px rgba(5,188,169,.25);
+   transform: translateY(-1px);
+}
+
+/* INTERACCIÓN (como el badge ) */
+.menu-btn:hover label {
+   background: var(--gl2);
+}
+.menu-btn input:checked + label {
+   background: var(--gl2);
+   border-color: var(--g);
+}
+
+/* animación X */
+.menu-btn input:checked + label .line--1,
+.menu-btn input:checked + label .line--3 {
+   stroke-dasharray: 22.63 126.64;
+   stroke-dashoffset: -94.11;
+}
+
+.menu-btn input:checked + label .line--2 {
+   stroke-dasharray: 0 70;
+   stroke-dashoffset: -50;
 }
 
 /* MOBILE NAV */
 .mob-nav {
-   display: none;
+   display: flex; 
    position: fixed;
    inset: 0;
    z-index: 790;
@@ -428,11 +466,19 @@ body.light #nav:not(.solid) .burger span {
    padding: 86px 32px 40px;
    flex-direction: column;
    border-bottom: 1px solid var(--brd);
-   overflow-y: auto
+   overflow-y: auto;
+
+   /* animación */
+   opacity: 0;
+   pointer-events: none;
+   transform: translateY(-10px);
+   transition: all .3s ease;
 }
 
 .mob-nav.open {
-   display: flex
+   opacity: 1;
+   pointer-events: auto;
+   transform: translateY(0);
 }
 
 .mob-nav a {
@@ -476,6 +522,8 @@ body.light #nav:not(.solid) .burger span {
    color: var(--t3);
    font-weight: 500
 }
+
+
 
 /* ═══════════════════════════════════════
    HERO
@@ -2867,4 +2915,16 @@ body.light .icon-sun {
 
 body.light .icon-moon {
   opacity: 0;
+}
+
+@media (max-width: 900px) {
+
+   .nav-links,
+   .nav-cta {
+      display: none;
+   }
+
+   .menu-btn {
+      display: block;
+   }
 }

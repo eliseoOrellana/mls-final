@@ -138,5 +138,21 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(type,1200);
   }
 
+  var toggle = document.getElementById("menu-toggle");
+var mobNav = document.getElementById("mobNav");
+
+if (toggle && mobNav) {
+  toggle.addEventListener("change", function () {
+    mobNav.classList.toggle("open", toggle.checked);
+    document.body.style.overflow = toggle.checked ? "hidden" : "";
+  });
+
+  window.closeMob = function () {
+    toggle.checked = false;
+    mobNav.classList.remove("open");
+    document.body.style.overflow = "";
+  };
+}
+
 });
 })();
