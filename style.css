@@ -1064,102 +1064,28 @@ body.light #nav:not(.solid) .nl:hover {
    margin-top: 2px
 }
 
-/* floating cards */
-.fc-float {
-   position: absolute;
-   background: rgba(13, 21, 37, .95);
-   border: 1px solid rgba(255, 255, 255, .1);
-   border-radius: 14px;
-   padding: 12px 14px;
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   box-shadow: 0 16px 48px rgba(0, 0, 0, .5);
-   z-index: 2
+/* cambio imagen por modo hero */
+
+.h-img {
+   width: 100%;
+   height: auto;
+   display: block;
+   border-radius: 18px;
+   object-fit: cover;
+   transition: opacity .35s ease;
 }
 
-.fc-float.left {
-   bottom: -22px;
-   left: -28px;
-   animation: fn1 5s ease-in-out infinite
+/* DARK (default) */
+.h-img {
+   content: url("img/resumenVentas/resumen-ventas-dark.png");
 }
 
-.fc-float.right {
-   top: 36px;
-   right: -26px;
-   animation: fn2 6s ease-in-out infinite
+/* LIGHT MODE */
+body.light .h-img {
+   content: url("img/resumenVentas/resumen-ventas-light.png");
 }
 
-@keyframes fn1 {
 
-   0%,
-   100% {
-      transform: translateY(0) rotate(-1.2deg)
-   }
-
-   50% {
-      transform: translateY(-7px) rotate(-1.2deg)
-   }
-}
-
-@keyframes fn2 {
-
-   0%,
-   100% {
-      transform: translateY(0) rotate(1.2deg)
-   }
-
-   50% {
-      transform: translateY(-6px) rotate(1.2deg)
-   }
-}
-
-.fci {
-   width: 34px;
-   height: 34px;
-   border-radius: 9px;
-   flex-shrink: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center
-}
-
-.fci.g {
-   background: var(--gl);
-   border: 1px solid rgba(5, 188, 169, .2)
-}
-
-.fci.g svg {
-   stroke: var(--g)
-}
-
-.fci.b {
-   background: rgba(55, 138, 221, .12);
-   border: 1px solid rgba(55, 138, 221, .2)
-}
-
-.fci.b svg {
-   stroke: #7eb8f7
-}
-
-.fci svg {
-   width: 15px;
-   height: 15px;
-   fill: none;
-   stroke-width: 1.8;
-   stroke-linecap: round
-}
-
-.fct-title {
-   font-size: 12px;
-   font-weight: 700;
-   color: #f1f5f9
-}
-
-.fct-sub {
-   font-size: 11px;
-   color: #64748b
-}
 
 /* ═══════════════════════════════════════
    LOGOS STRIP
