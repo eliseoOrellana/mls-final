@@ -304,18 +304,20 @@ body.light #nav:not(.solid) .nav-logo {
    width: 34px;
    height: 34px;
    border-radius: 9px;
-   background: var(--g);
    display: flex;
    align-items: center;
    justify-content: center;
    flex-shrink: 0;
-   box-shadow: 0 0 14px rgba(5, 188, 169, .4)
+   box-shadow: 0 0 14px rgba(5, 188, 169, .3);
+   overflow: hidden; /* clave para imagen */
+   padding: 4px; /* opcional: aire interno pro */
 }
 
-.lm svg {
-   width: 16px;
-   height: 16px;
-   fill: #fff
+.lm img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain; /* importante para logos */
+   display: block;
 }
 
 .nav-links {
@@ -809,7 +811,8 @@ body.light #nav:not(.solid) .nl:hover {
    overflow: hidden;
    box-shadow: 0 48px 120px rgba(0, 0, 0, .65), 0 0 0 1px rgba(5, 188, 169, .06);
    animation: floatY 7s ease-in-out infinite;
-   position: relative
+   position: relative;
+   box-shadow: 0 0 14px rgba(5, 188, 169, .3);
 }
 
 @keyframes floatY {
