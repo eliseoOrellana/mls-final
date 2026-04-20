@@ -15,11 +15,11 @@ html {
 
 html.transition,
 html.transition * {
-  transition: background-color .35s ease,
-              color .25s ease,
-              border-color .25s ease,
-              fill .25s ease,
-              stroke .25s ease !important;
+   transition: background-color .35s ease,
+      color .25s ease,
+      border-color .25s ease,
+      fill .25s ease,
+      stroke .25s ease !important;
 }
 
 body {
@@ -386,7 +386,8 @@ body.light #nav:not(.solid) .nl:hover {
 
 .menu-btn {
    display: none;
-   margin-left: auto; /* 🔥 ocupa el lugar del burger */
+   margin-left: auto;
+   /* 🔥 ocupa el lugar del burger */
    z-index: 810;
 }
 
@@ -399,8 +400,10 @@ body.light #nav:not(.solid) .nl:hover {
    height: 38px;
    border-radius: 999px;
 
-   background: var(--gl);          /* fondo verde suave */
-   border: 1px solid var(--gl2);  /* borde verde */
+   background: var(--gl);
+   /* fondo verde suave */
+   border: 1px solid var(--gl2);
+   /* borde verde */
 
    display: flex;
    align-items: center;
@@ -411,27 +414,29 @@ body.light #nav:not(.solid) .nl:hover {
    width: 100%;
    height: 100%;
 }
+
 /* BASE */
 .line {
    fill: none;
-   stroke: var(--g); /* 🔥 VERDE SIEMPRE */
+   stroke: var(--g);
+   /* 🔥 VERDE SIEMPRE */
    stroke-width: 3.2;
    stroke-linecap: round;
    stroke-linejoin: round;
 
    stroke-dasharray: 24 126.64;
    stroke-dashoffset: -38;
-   transition: all .6s cubic-bezier(.4,0,.2,1);
+   transition: all .6s cubic-bezier(.4, 0, .2, 1);
 }
 
 .menu-btn label {
-   box-shadow: 0 0 0 1px var(--gl2), 0 4px 14px rgba(0,0,0,.25);
+   box-shadow: 0 0 0 1px var(--gl2), 0 4px 14px rgba(0, 0, 0, .25);
    transition: all .25s ease;
 }
 
 .menu-btn:hover label {
    background: var(--gl2);
-   box-shadow: 0 0 0 1px var(--g), 0 6px 18px rgba(5,188,169,.25);
+   box-shadow: 0 0 0 1px var(--g), 0 6px 18px rgba(5, 188, 169, .25);
    transform: translateY(-1px);
 }
 
@@ -439,26 +444,27 @@ body.light #nav:not(.solid) .nl:hover {
 .menu-btn:hover label {
    background: var(--gl2);
 }
-.menu-btn input:checked + label {
+
+.menu-btn input:checked+label {
    background: var(--gl2);
    border-color: var(--g);
 }
 
 /* animación X */
-.menu-btn input:checked + label .line--1,
-.menu-btn input:checked + label .line--3 {
+.menu-btn input:checked+label .line--1,
+.menu-btn input:checked+label .line--3 {
    stroke-dasharray: 22.63 126.64;
    stroke-dashoffset: -94.11;
 }
 
-.menu-btn input:checked + label .line--2 {
+.menu-btn input:checked+label .line--2 {
    stroke-dasharray: 0 70;
    stroke-dashoffset: -50;
 }
 
 /* MOBILE NAV */
 .mob-nav {
-   display: flex; 
+   display: flex;
    position: fixed;
    inset: 0;
    z-index: 790;
@@ -1442,6 +1448,7 @@ body.light .h-img {
    display: block;
    transition: transform .35s ease;
 }
+
 /* DARK (default) */
 .b1 .bento-img {
    content: url("img/pedidos/pedidosTiempoReal/pedidos-dark.png");
@@ -1451,6 +1458,7 @@ body.light .h-img {
 body.light .b1 .bento-img {
    content: url("img/pedidos/pedidosTiempoReal/pedidos-light.png");
 }
+
 .bento-card:hover .bento-img {
    transform: scale(1.04);
 }
@@ -1475,11 +1483,14 @@ body.light .b1 .bento-img {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   object-position: top; /* 🔥 muestra mejor dashboards */
+   object-position: top;
+   /* muestra mejor dashboards */
 }
+
 .b2-img {
    height: clamp(200px, 22vw, 250px);
 }
+
 /* DARK */
 .b2-img img {
    content: url("img/cocina/cocina-dark.png");
@@ -1489,6 +1500,7 @@ body.light .b1 .bento-img {
 body.light .b2-img img {
    content: url("img/cocina/cocina-ligth.png");
 }
+
 /* ═══════════════════════════════════════
    STEPS
 ════════════════════════════════════════ */
@@ -2889,23 +2901,23 @@ footer {
 
 /* THEME ICONS */
 .icon-sun {
-  opacity: 0;
-  transform: scale(.6);
-  transition: all .3s ease;
+   opacity: 0;
+   transform: scale(.6);
+   transition: all .3s ease;
 }
 
 .icon-moon {
-  opacity: 1;
-  transition: all .3s ease;
+   opacity: 1;
+   transition: all .3s ease;
 }
 
 body.light .icon-sun {
-  opacity: 1;
-  transform: scale(1);
+   opacity: 1;
+   transform: scale(1);
 }
 
 body.light .icon-moon {
-  opacity: 0;
+   opacity: 0;
 }
 
 @media (max-width: 900px) {
