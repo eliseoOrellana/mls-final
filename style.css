@@ -309,14 +309,17 @@ body.light #nav:not(.solid) .nav-logo {
    justify-content: center;
    flex-shrink: 0;
    box-shadow: 0 0 14px rgba(5, 188, 169, .3);
-   overflow: hidden; /* clave para imagen */
-   padding: 4px; /* opcional: aire interno pro */
+   overflow: hidden;
+   /* clave para imagen */
+   padding: 4px;
+   /* opcional: aire interno pro */
 }
 
 .lm img {
    width: 100%;
    height: 100%;
-   object-fit: contain; /* importante para logos */
+   object-fit: contain;
+   /* importante para logos */
    display: block;
 }
 
@@ -1846,7 +1849,7 @@ body.light .b2-img img {
 
 .pg-h1 {
    font-family: 'DM Serif Display', serif;
-   font-size: clamp(40px, 5vw, 72px);
+   font-size: clamp(46px, 5.5vw, 78px);
    font-weight: 400;
    line-height: 1.08;
    color: #fff;
@@ -2814,6 +2817,10 @@ footer {
    }
 
    .pg-hero {
+
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       padding: 110px 0 60px
    }
 
