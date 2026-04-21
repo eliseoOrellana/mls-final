@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded',function(){
   // ── TYPING EFFECT ─────────────────────────────────────────────────
   var typer=document.getElementById('typer');
   if(typer){
-    var words=['pedidos','cocina','equipo','ventas'];
+    var words=['pedidos','equipos','ventas','turnos'];
     var wi=0,ci=0,deleting=false;
     function type(){
       var w=words[wi];
