@@ -351,7 +351,10 @@ body.light #nav:not(.solid) .nl {
 .nl:hover,
 .nl.act {
    color: var(--t1);
-   background: var(--bg3)
+   background: rgba(255,255,255,.06);
+   border: 1px solid rgba(255,255,255,.08);
+   backdrop-filter: blur(10px);
+   box-shadow: 0 4px 20px rgba(0,0,0,.25);
 }
 
 body.light #nav:not(.solid) .nl:hover {
@@ -495,7 +498,7 @@ body.light #nav:not(.solid) .nl:hover {
 .mob-nav a {
    font-family: 'DM Serif Display', serif;
    font-size: 28px;
-   color: var(--t4);
+   color: var(brd3);
    padding: 16px 0;
    border-bottom: 1px solid var(--brd);
    transition: color .2s
