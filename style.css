@@ -498,7 +498,7 @@ body.light #nav:not(.solid) .nl:hover {
 .mob-nav a {
    font-family: 'DM Serif Display', serif;
    font-size: 28px;
-   color: var(brd3);
+    color: var(--brd3);
    padding: 16px 0;
    border-bottom: 1px solid var(--brd);
    transition: color .2s
@@ -2377,7 +2377,7 @@ body.light .b2-img img {
    CTA
 ════════════════════════════════════════ */
 .cta-sec {
-   background: var(--hero-bg);
+    background: var(--bg0);
    padding: 116px 0;
    position: relative;
    overflow: hidden;
@@ -2496,6 +2496,48 @@ body.light .b2-img img {
    stroke-linecap: round
 }
 
+body.light .cta-sec {
+   background: linear-gradient(180deg, #f8fafc 0%, #eef4f8 100%);
+   border-top: 1px solid rgba(0,0,0,.08);
+}
+
+body.light .cta-bg {
+   background:
+      radial-gradient(
+         ellipse 70% 70% at 50% 50%,
+         rgba(5,188,169,.10) 0%,
+         transparent 65%
+      );
+}
+
+body.light .cta-h2 {
+   color: var(--t1);
+}
+
+body.light .cta-p {
+   color: rgba(15, 25, 35, .62);
+}
+
+body.light .cta-legal {
+   color: rgba(15, 25, 35, .48);
+}
+
+body.light .cta-legal svg {
+   stroke: rgba(15, 25, 35, .42);
+}
+
+body.light .btn-ghost {
+   color: var(--t2);
+   border: 1px solid rgba(0,0,0,.12);
+   background: rgba(255,255,255,.55);
+   backdrop-filter: blur(10px);
+}
+
+body.light .btn-ghost:hover {
+   background: rgba(255,255,255,.9);
+   border-color: var(--g);
+   color: var(--t1);
+}
 /* ═══════════════════════════════════════
    FOOTER
 ════════════════════════════════════════ */
@@ -2663,6 +2705,52 @@ footer {
    border-color: var(--g);
    color: var(--g);
    background: var(--gl)
+}
+
+body.light footer {
+   border-top: 1px solid rgba(0, 0, 0, .10);
+   background: #f8fafc;
+}
+
+body.light .fg {
+   border-bottom: 1px solid rgba(0, 0, 0, .10);
+}
+
+body.light .fcol h5 {
+   color: rgba(0, 0, 0, .45);
+}
+
+body.light .fcol a,
+body.light .fd,
+body.light .fct span,
+body.light .nl-lbl,
+body.light .fcp {
+   color: rgba(0, 0, 0, .58);
+}
+
+body.light .fcol a:hover {
+   color: var(--g);
+}
+
+body.light .fs {
+   border-color: rgba(0, 0, 0, .12);
+   color: rgba(0, 0, 0, .45);
+}
+
+body.light .fs:hover {
+   border-color: var(--g);
+   color: var(--g);
+   background: var(--gl);
+}
+
+body.light .nl-f input {
+   background: rgba(0, 0, 0, .03);
+   border: 1px solid rgba(0, 0, 0, .08);
+   color: var(--t1);
+}
+
+body.light .nl-f input::placeholder {
+   color: rgba(0, 0, 0, .35);
 }
 
 /* ═══════════════════════════════════════
