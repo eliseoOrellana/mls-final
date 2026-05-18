@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>SingularityCode — Brand Kit v2.1</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --b1:#72C0FF;--b2:#4A8EE8;--b3:#2A5EC8;--b4:#1848B0;
+  --p1:#A040D0;--p2:#8030C0;--p3:#6010A0;
+  --m1:#F080FF;--m2:#D040E8;--m3:#B020C8;
+  --d0:#0B0D12;--d1:#10141E;--d2:#161B28;--d3:#1C2236;--d4:#222A42;
+  --g1:#7A8AAA;--g2:#A8B4CC;--g3:#C8D0E0;
+  --font:'Inter',-apple-system,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--d0);color:#fff;font-family:var(--font);overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--d1)}::-webkit-scrollbar-thumb{background:var(--d3);border-radius:3px}
+.w{max-width:1100px;margin:0 auto;padding:0 36px}
+.sec{padding:72px 0}
+.hr{height:1px;background:linear-gradient(90deg,transparent,rgba(74,142,232,.35),rgba(160,64,208,.35),transparent)}
+.lbl{font-size:10px;font-weight:700;letter-spacing:3.5px;color:var(--b2);text-transform:uppercase;margin-bottom:8px}
+.h2{font-size:32px;font-weight:900;letter-spacing:-.7px;margin-bottom:6px}
+.sub{font-size:14px;color:var(--g1);margin-bottom:40px;max-width:500px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--d2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;transition:border-color .2s}
+.card:hover{border-color:rgba(74,142,232,.25)}
+.topbar{background:var(--d1);border-bottom:1px solid rgba(255,255,255,.05);padding:13px 36px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:99;backdrop-filter:blur(20px)}
+.topbar-name{font-size:16px;font-weight:900;letter-spacing:-.3px}
+.topbar-name .blue{color:var(--b2)}
+.pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 11px;border-radius:20px;text-transform:uppercase}
+.pb{background:rgba(74,142,232,.12);color:var(--b2);border:1px solid rgba(74,142,232,.22)}
+.pp{background:rgba(160,64,208,.12);color:#B060E8;border:1px solid rgba(160,64,208,.22)}
+.pg{background:rgba(34,197,94,.1);color:#22C55E;border:1px solid rgba(34,197,94,.2)}
+.pm{background:rgba(208,64,232,.12);color:#E060F0;border:1px solid rgba(208,64,232,.22)}
+.swatch{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)}
+.sw-c{height:72px;position:relative}
+.sw-i{padding:11px 13px;background:var(--d2)}
+.sw-n{font-size:12px;font-weight:700;margin-bottom:2px}
+.sw-h{font-family:var(--mono);font-size:11px;color:var(--g1)}
+.tok{display:flex;align-items:center;gap:12px;padding:10px 13px;border-radius:8px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);margin-bottom:6px}
+.tok-p{width:28px;height:28px;border-radius:6px;flex-shrink:0}
+.tok-n{font-family:var(--mono);font-size:11px;color:var(--b2);min-width:180px}
+.tok-v{font-family:var(--mono);font-size:11px;color:var(--g2)}
+.tok-d{font-size:11px;color:var(--g1)}
+.tsamp{background:var(--d2);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:24px;margin-bottom:12px}
+.tmeta{font-size:10px;font-family:var(--mono);color:var(--g1);margin-bottom:12px;letter-spacing:1px}
+.gline{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.gico{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;font-weight:700}
+.bok{background:rgba(34,197,94,.15);color:#22C55E}
+.bno{background:rgba(239,68,68,.15);color:#EF4444}
+.gt .title{font-size:13px;font-weight:600;margin-bottom:2px}
+.gt .desc{font-size:12px;color:var(--g1)}
+.browser{background:var(--d2);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
+.bbar{background:var(--d1);padding:9px 13px;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,.06)}
+.bdot{width:9px;height:9px;border-radius:50%}
+.burl{flex:1;background:var(--d2);border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:4px 10px;font-size:11px;color:var(--g1);font-family:var(--mono)}
+.logobox{display:flex;align-items:center;justify-content:center;border-radius:14px;padding:40px 24px;min-height:160px;position:relative}
+.lb-dark{background:var(--d0);border:1px solid rgba(255,255,255,.07)}
+.lb-light{background:#EAECf4;border:1px solid rgba(0,0,0,.1)}
+.lb-black{background:#000;border:1px solid rgba(255,255,255,.06)}
+.lb-white{background:#fff;border:1px solid rgba(0,0,0,.08)}
+.bc{border-radius:12px;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;aspect-ratio:1.75}
+.bc-dark{background:linear-gradient(135deg,#0B1020,#131D38);border:1px solid rgba(74,142,232,.18)}
+.bc-back{background:linear-gradient(135deg,#2A6CD4 0%,#6030A8 50%,#9040C0 100%)}
+.bc-cir{position:absolute;inset:0;opacity:.07;background-image:repeating-linear-gradient(90deg,#4A8EE8 0,#4A8EE8 1px,transparent 0,transparent 38px),repeating-linear-gradient(#4A8EE8 0,#4A8EE8 1px,transparent 0,transparent 38px);background-size:38px 38px;border-radius:12px}
+/* GUIDE STYLES */
+.guide-section{background:var(--d2);border:1px solid rgba(74,142,232,.15);border-radius:16px;padding:32px;margin-bottom:20px}
+.guide-step{display:flex;gap:18px;margin-bottom:28px;align-items:flex-start}
+.step-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4A8EE8,#8030C0);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex-shrink:0}
+.step-body h4{font-size:15px;font-weight:800;margin-bottom:5px}
+.step-body p{font-size:13px;color:var(--g2);line-height:1.7}
+.code-block{background:var(--d0);border:1px solid rgba(74,142,232,.12);border-radius:10px;padding:16px;margin-top:10px;font-family:var(--mono);font-size:12px;color:#C8D0E0;line-height:1.8;overflow-x:auto}
+.tag-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;margin:3px}
+.tag-where{background:rgba(74,142,232,.12);color:var(--b2);border:1px solid rgba(74,142,232,.2)}
+.tag-when{background:rgba(208,64,232,.12);color:#E060F0;border:1px solid rgba(208,64,232,.2)}
+.tag-format{background:rgba(34,197,94,.1);color:#22C55E;border:1px solid rgba(34,197,94,.2)}
+.checklist{list-style:none;padding:0}
+.checklist li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;color:var(--g2)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{content:"✓";color:#22C55E;font-weight:900;flex-shrink:0;margin-top:1px}
+.size-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.size-item{background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px;text-align:center}
+.size-box{margin:0 auto 8px;background:linear-gradient(135deg,#0A1020,#1A284A);border:1px solid rgba(74,142,232,.2);border-radius:8px;display:flex;align-items:center;justify-content:center}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}.w{padding:0 18px}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-name">Singularity<span class="blue">Code</span></div>
+  <div style="display:flex;gap:7px">
+    <span class="pill pb">Brand Guidelines</span>
+    <span class="pill pp">v2.1</span>
+    <span class="pill pm">Fixed Favicons</span>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 70% 55% at 50% 40%,rgba(74,142,232,.14) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 45% at 58% 54%,rgba(160,64,208,.12) 0%,transparent 55%),var(--d0)">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(74,142,232,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,142,232,.04) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,black,transparent)"></div>
+  <div style="text-align:center;z-index:2;padding:40px 20px;width:100%">
+    <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(74,142,232,.1);border:1px solid rgba(74,142,232,.2);color:var(--b2);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:32px">
+      <span style="width:5px;height:5px;border-radius:50%;background:var(--b2);animation:blink 2s infinite"></span>
+      Identity System — Brand Kit Completo v2.1
+    </div>
+    <div style="display:flex;justify-content:center;margin-bottom:28px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" style="width:min(680px,95vw)">
+      <defs>
+        <linearGradient id="GL" x1="0" y1="0" x2=".35" y2="1">
+          <stop offset="0%" stop-color="#80CCFF"/>
+          <stop offset="20%" stop-color="#5A9EF0"/>
+          <stop offset="55%" stop-color="#2E68D8"/>
+          <stop offset="100%" stop-color="#1648B0"/>
+        </linearGradient>
+        <linearGradient id="GR" x1="1" y1="0" x2=".65" y2="1">
+          <stop offset="0%" stop-color="#80CCFF"/>
+          <stop offset="20%" stop-color="#5A9EF0"/>
+          <stop offset="55%" stop-color="#2E68D8"/>
+          <stop offset="100%" stop-color="#1648B0"/>
+        </linearGradient>
+        <radialGradient id="GB" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"  stop-color="#F070FF"/>
+          <stop offset="22%" stop-color="#CC38E8"/>
+          <stop offset="50%" stop-color="#8030C0"/>
+          <stop offset="78%" stop-color="#3E5EC8"/>
+          <stop offset="100%" stop-color="#3080D8" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="GC" cx="36%" cy="30%" r="65%">
+          <stop offset="0%"  stop-color="#FFB0FF"/>
+          <stop offset="25%" stop-color="#F068F8"/>
+          <stop offset="58%" stop-color="#C030D0"/>
+          <stop offset="100%" stop-color="#7818A8"/>
+        </radialGradient>
+        <filter id="FG"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <path d="M80 16 C60 16,48 28,48 44 L48 82 C48 96,36 106,22 115 C36 124,48 134,48 148 L48 186 C48 202,60 214,80 214"
+            fill="none" stroke="url(#GL)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M80 16 C60 16,48 28,48 44 L48 82 C48 96,36 106,22 115 C36 124,48 134,48 148 L48 186 C48 202,60 214,80 214"
+            fill="none" stroke="#A8DDFF" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+      <path d="M180 16 C200 16,212 28,212 44 L212 82 C212 96,224 106,238 115 C224 124,212 134,212 148 L212 186 C212 202,200 214,180 214"
+            fill="none" stroke="url(#GR)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M180 16 C200 16,212 28,212 44 L212 82 C212 96,224 106,238 115 C224 124,212 134,212 148 L212 186 C212 202,200 214,180 214"
+            fill="none" stroke="#A8DDFF" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+      <g transform="translate(130,115)">
+        <circle cx="0" cy="0" r="80" fill="url(#GB)" filter="url(#FG)" opacity=".55"/>
+        <line x1="0" y1="-13" x2="0" y2="-82" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="5" y1="-12" x2="26" y2="-76" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="9.5" y1="-9.5" x2="58" y2="-58" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="12" y1="-5" x2="76" y2="-26" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="13" y1="0" x2="82" y2="0" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="12" y1="5" x2="76" y2="26" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="9.5" y1="9.5" x2="58" y2="58" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="5" y1="12" x2="26" y2="76" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="0" y1="13" x2="0" y2="82" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="-5" y1="12" x2="-26" y2="76" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="-9.5" y1="9.5" x2="-58" y2="58" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="-12" y1="5" x2="-76" y2="26" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="-13" y1="0" x2="-82" y2="0" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="-12" y1="-5" x2="-76" y2="-26" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <line x1="-9.5" y1="-9.5" x2="-58" y2="-58" stroke="#3D70D8" stroke-width="1.4" stroke-linecap="round" opacity=".78"/>
+        <line x1="-5" y1="-12" x2="-26" y2="-76" stroke="#3D70D8" stroke-width="1.1" stroke-linecap="round" opacity=".68"/>
+        <circle cx="0" cy="-72" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="24" cy="-68" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="51" cy="-51" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="68" cy="-24" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="72" cy="0" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="68" cy="24" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="51" cy="51" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="24" cy="68" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="0" cy="72" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="-24" cy="68" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="-51" cy="51" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="-68" cy="24" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="-72" cy="0" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="-68" cy="-24" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="-51" cy="-51" r="2.5" fill="#5898E8" opacity=".82"/><circle cx="-24" cy="-68" r="2" fill="#5898E8" opacity=".74"/>
+        <circle cx="0" cy="-30" r="3.8" fill="#9428C0" opacity=".9"/><circle cx="21" cy="-21" r="3.8" fill="#9C28B8" opacity=".9"/>
+        <circle cx="30" cy="0" r="3.8" fill="#A822B0" opacity=".9"/><circle cx="21" cy="21" r="3.8" fill="#A822A8" opacity=".9"/>
+        <circle cx="0" cy="30" r="3.8" fill="#A822A8" opacity=".9"/><circle cx="-21" cy="21" r="3.8" fill="#A822A8" opacity=".9"/>
+        <circle cx="-30" cy="0" r="3.8" fill="#A022B0" opacity=".9"/><circle cx="-21" cy="-21" r="3.8" fill="#9428C0" opacity=".9"/>
+        <circle cx="0" cy="-16" r="4.5" fill="#C020C8" opacity=".92"/><circle cx="11" cy="-11" r="3.5" fill="#C820C8" opacity=".88"/>
+        <circle cx="16" cy="0" r="4.5" fill="#D018C8" opacity=".92"/><circle cx="11" cy="11" r="3.5" fill="#D018C8" opacity=".88"/>
+        <circle cx="0" cy="16" r="4.5" fill="#D018C8" opacity=".92"/><circle cx="-11" cy="11" r="3.5" fill="#D018C8" opacity=".88"/>
+        <circle cx="-16" cy="0" r="4.5" fill="#C820C8" opacity=".92"/><circle cx="-11" cy="-11" r="3.5" fill="#C020C8" opacity=".88"/>
+        <circle cx="0" cy="0" r="18" fill="#600EA0" opacity=".95"/>
+        <circle cx="0" cy="0" r="15" fill="url(#GC)"/>
+        <ellipse cx="-4" cy="-5" rx="6" ry="4.8" fill="white" opacity=".28"/>
+        <circle cx="-5.5" cy="-6.5" r="2.5" fill="white" opacity=".42"/>
+        <circle cx="-5.5" cy="-6.5" r="1" fill="white" opacity=".78"/>
+      </g>
+      <text x="278" y="132" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="58" font-weight="800" letter-spacing="-2" fill="#FFFFFF">Singularity</text>
+      <text x="570" y="132" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="58" font-weight="800" letter-spacing="-2" fill="#4A8EE8">Code</text>
+      <text x="280" y="166" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="400" letter-spacing="4" fill="#7A8AAA">SOFTWARE DEVELOPMENT &amp; IT CONSULTING</text>
+    </svg>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+      <span class="pill pb">Logos</span><span class="pill pp">Colores</span>
+      <span class="pill pg">Tipografía</span><span class="pill pb">Mockups</span><span class="pill pp">Brand Kit</span><span class="pill pm">Guía de Uso</span>
+    </div>
+  </div>
+</section>
+<div class="hr"></div>
+
+<!-- ═══ SEC 1: VERSIONES ═══ -->
+<section class="sec"><div class="w">
+  <div class="lbl">01 — Logo &amp; Versiones</div>
+  <h2 class="h2">Sistema de Logo</h2>
+  <p class="sub">El logo en todas sus variantes: dark, light, monocromático, solo isotipo, compacto y favicon.</p>
+  <div class="g3" style="margin-bottom:14px">
+    <div>
+      <div class="logobox lb-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" style="width:100%;max-width:360px">
+          <defs>
+            <linearGradient id="vL1" x1="0" y1="0" x2=".35" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="55%" stop-color="#2E68D8"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+            <linearGradient id="vR1" x1="1" y1="0" x2=".65" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="55%" stop-color="#2E68D8"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+            <radialGradient id="vC1" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="30%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient>
+            <radialGradient id="vB1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#E060F8"/><stop offset="45%" stop-color="#8030C0"/><stop offset="100%" stop-color="#3080D8" stop-opacity="0"/></radialGradient>
+          </defs>
+          <path d="M48 8C36 8,28 15,28 24L28 48C28 57,20 64,12 80C20 96,28 103,28 112L28 136C28 145,36 152,48 152" fill="none" stroke="url(#vL1)" stroke-width="9" stroke-linecap="round"/>
+          <path d="M100 8C112 8,120 15,120 24L120 48C120 57,128 64,136 80C128 96,120 103,120 112L120 136C120 145,112 152,100 152" fill="none" stroke="url(#vR1)" stroke-width="9" stroke-linecap="round"/>
+          <path d="M48 8C36 8,28 15,28 24L28 48C28 57,20 64,12 80C20 96,28 103,28 112L28 136C28 145,36 152,48 152" fill="none" stroke="#A8DDFF" stroke-width="2.2" stroke-linecap="round" opacity=".4"/>
+          <path d="M100 8C112 8,120 15,120 24L120 48C120 57,128 64,136 80C128 96,120 103,120 112L120 136C120 145,112 152,100 152" fill="none" stroke="#A8DDFF" stroke-width="2.2" stroke-linecap="round" opacity=".4"/>
+          <g transform="translate(74,80)">
+            <line x1="0" y1="-8" x2="0" y2="-50" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="5.5" y1="-5.5" x2="35" y2="-35" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="8" y1="0" x2="50" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="5.5" y1="5.5" x2="35" y2="35" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="0" y1="8" x2="0" y2="50" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-5.5" y1="5.5" x2="-35" y2="35" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-8" y1="0" x2="-50" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-5.5" y1="-5.5" x2="-35" y2="-35" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <circle cx="0" cy="-46" r="2" fill="#5898E8" opacity=".8"/><circle cx="32" cy="-32" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="46" cy="0" r="2" fill="#5898E8" opacity=".8"/><circle cx="32" cy="32" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="0" cy="46" r="2" fill="#5898E8" opacity=".8"/><circle cx="-32" cy="32" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="-46" cy="0" r="2" fill="#5898E8" opacity=".8"/><circle cx="-32" cy="-32" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="0" cy="-30" r="2.8" fill="#7050C0" opacity=".85"/><circle cx="21" cy="-21" r="2.8" fill="#7050C0" opacity=".85"/>
+            <circle cx="30" cy="0" r="2.8" fill="#8040B8" opacity=".85"/><circle cx="21" cy="21" r="2.8" fill="#8840B0" opacity=".85"/>
+            <circle cx="0" cy="30" r="2.8" fill="#8840B0" opacity=".85"/><circle cx="-21" cy="21" r="2.8" fill="#8840B0" opacity=".85"/>
+            <circle cx="-30" cy="0" r="2.8" fill="#8040B8" opacity=".85"/><circle cx="-21" cy="-21" r="2.8" fill="#7050C0" opacity=".85"/>
+            <circle cx="0" cy="-18" r="3.5" fill="#9828C0" opacity=".9"/><circle cx="12" cy="-12" r="2.8" fill="#A020B8" opacity=".88"/>
+            <circle cx="18" cy="0" r="3.5" fill="#A820B0" opacity=".9"/><circle cx="12" cy="12" r="2.8" fill="#A820A8" opacity=".88"/>
+            <circle cx="0" cy="18" r="3.5" fill="#A820A8" opacity=".9"/><circle cx="-12" cy="12" r="2.8" fill="#A820A8" opacity=".88"/>
+            <circle cx="-18" cy="0" r="3.5" fill="#A820B0" opacity=".9"/><circle cx="-12" cy="-12" r="2.8" fill="#9828C0" opacity=".88"/>
+            <circle cx="0" cy="0" r="28" fill="url(#vB1)" opacity=".45"/>
+            <circle cx="0" cy="0" r="11" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="0" cy="0" r="9" fill="url(#vC1)"/>
+            <ellipse cx="-2.5" cy="-3" rx="3.5" ry="2.8" fill="white" opacity=".3"/>
+            <circle cx="-3.5" cy="-3.5" r="1.5" fill="white" opacity=".48"/>
+          </g>
+          <text x="155" y="90" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="800" letter-spacing="-1.2" fill="#FFFFFF">Singularity</text>
+          <text x="318" y="90" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="800" letter-spacing="-1.2" fill="#4A8EE8">Code</text>
+          <text x="157" y="112" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="8" font-weight="400" letter-spacing="3" fill="#7A8AAA">SOFTWARE DEVELOPMENT &amp; IT CONSULTING</text>
+        </svg>
+      </div>
+      <p style="font-size:11px;color:#445566;text-align:center;margin-top:8px">Dark — uso principal</p>
+    </div>
+    <div>
+      <div class="logobox lb-light">
+        <div>
+          <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:900;letter-spacing:-1px;color:#0D1225;text-align:center">Singularity<span style="color:#1A50C0">Code</span></div>
+          <div style="font-size:8px;letter-spacing:3px;color:#6677AA;text-align:center;margin-top:4px">SOFTWARE DEVELOPMENT &amp; IT CONSULTING</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:#445566;text-align:center;margin-top:8px">Light mode</p>
+    </div>
+    <div>
+      <div class="logobox lb-black">
+        <div>
+          <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:900;letter-spacing:-1px;color:#fff;text-align:center">Singularity<span style="color:#fff">Code</span></div>
+          <div style="font-size:8px;letter-spacing:3px;color:rgba(255,255,255,.4);text-align:center;margin-top:4px">SOFTWARE DEVELOPMENT &amp; IT CONSULTING</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:#445566;text-align:center;margin-top:8px">Monocromático blanco</p>
+    </div>
+  </div>
+
+  <!-- Fila 2: isotipo / wordmark / compacto / favicon -->
+  <div class="g4">
+    <div class="card" style="text-align:center">
+      <div class="lbl" style="margin-bottom:14px">Solo Isotipo</div>
+      <div style="display:flex;justify-content:center;margin-bottom:10px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 160" width="80">
+          <defs>
+            <linearGradient id="iL" x1="0" y1="0" x2=".35" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+            <linearGradient id="iR" x1="1" y1="0" x2=".65" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+            <radialGradient id="iC" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="30%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient>
+            <radialGradient id="iB" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#E060F8"/><stop offset="45%" stop-color="#8030C0"/><stop offset="100%" stop-color="#3080D8" stop-opacity="0"/></radialGradient>
+          </defs>
+          <path d="M38 6C28 6,22 12,22 20L22 42C22 50,15 57,8 74C15 91,22 98,22 106L22 128C22 136,28 142,38 142" fill="none" stroke="url(#iL)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M100 6C110 6,116 12,116 20L116 42C116 50,123 57,130 74C123 91,116 98,116 106L116 128C116 136,110 142,100 142" fill="none" stroke="url(#iR)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M38 6C28 6,22 12,22 20L22 42C22 50,15 57,8 74C15 91,22 98,22 106L22 128C22 136,28 142,38 142" fill="none" stroke="#A8DDFF" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+          <path d="M100 6C110 6,116 12,116 20L116 42C116 50,123 57,130 74C123 91,116 98,116 106L116 128C116 136,110 142,100 142" fill="none" stroke="#A8DDFF" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+          <g transform="translate(69,74)">
+            <line x1="0" y1="-7" x2="0" y2="-46" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="5" y1="-5" x2="32" y2="-32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="7" y1="0" x2="46" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="5" y1="5" x2="32" y2="32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="0" y1="7" x2="0" y2="46" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-5" y1="5" x2="-32" y2="32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-7" y1="0" x2="-46" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <line x1="-5" y1="-5" x2="-32" y2="-32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+            <circle cx="0" cy="-42" r="2" fill="#5898E8" opacity=".8"/><circle cx="29" cy="-29" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="42" cy="0" r="2" fill="#5898E8" opacity=".8"/><circle cx="29" cy="29" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="0" cy="42" r="2" fill="#5898E8" opacity=".8"/><circle cx="-29" cy="29" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="-42" cy="0" r="2" fill="#5898E8" opacity=".8"/><circle cx="-29" cy="-29" r="2" fill="#5898E8" opacity=".8"/>
+            <circle cx="0" cy="-27" r="2.8" fill="#7050C0" opacity=".85"/><circle cx="19" cy="-19" r="2.8" fill="#7850B8" opacity=".85"/>
+            <circle cx="27" cy="0" r="2.8" fill="#8040B0" opacity=".85"/><circle cx="19" cy="19" r="2.8" fill="#8840A8" opacity=".85"/>
+            <circle cx="0" cy="27" r="2.8" fill="#8840A8" opacity=".85"/><circle cx="-19" cy="19" r="2.8" fill="#8840A8" opacity=".85"/>
+            <circle cx="-27" cy="0" r="2.8" fill="#8040B0" opacity=".85"/><circle cx="-19" cy="-19" r="2.8" fill="#7050C0" opacity=".85"/>
+            <circle cx="0" cy="-16" r="3.5" fill="#9828C0" opacity=".9"/><circle cx="11" cy="-11" r="2.8" fill="#A020B8" opacity=".88"/>
+            <circle cx="16" cy="0" r="3.5" fill="#A820B0" opacity=".9"/><circle cx="11" cy="11" r="2.8" fill="#A820A8" opacity=".88"/>
+            <circle cx="0" cy="16" r="3.5" fill="#A820A8" opacity=".9"/><circle cx="-11" cy="11" r="2.8" fill="#A820A8" opacity=".88"/>
+            <circle cx="-16" cy="0" r="3.5" fill="#A820B0" opacity=".9"/><circle cx="-11" cy="-11" r="2.8" fill="#9828C0" opacity=".88"/>
+            <circle cx="0" cy="0" r="25" fill="url(#iB)" opacity=".42"/>
+            <circle cx="0" cy="0" r="10" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="0" cy="0" r="8.5" fill="url(#iC)"/>
+            <ellipse cx="-2.2" cy="-2.8" rx="3.2" ry="2.5" fill="white" opacity=".3"/>
+            <circle cx="-3" cy="-3.5" r="1.3" fill="white" opacity=".5"/>
+          </g>
+        </svg>
+      </div>
+      <p style="font-size:11px;color:#556677">Apps · Favicon · Avatar</p>
+    </div>
+
+    <div class="card" style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div class="lbl" style="margin-bottom:14px">Wordmark</div>
+      <div style="font-family:'Inter',sans-serif;font-size:20px;font-weight:900;letter-spacing:-.7px"><span style="color:#fff">Singularity</span><span style="color:#4A8EE8">Code</span></div>
+      <div style="font-size:7.5px;letter-spacing:3px;color:#7A8AAA;margin-top:4px">SOFTWARE DEVELOPMENT</div>
+      <p style="font-size:11px;color:#556677;margin-top:14px">Documentos · Emails</p>
+    </div>
+
+    <div class="card" style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div class="lbl" style="margin-bottom:14px">Compacto</div>
+      <div style="font-family:'Inter',sans-serif;font-size:36px;font-weight:900;letter-spacing:-2px"><span style="color:#72C0FF">{</span><span style="color:#fff">S</span><span style="color:#4A8EE8">C</span><span style="color:#72C0FF">}</span></div>
+      <p style="font-size:11px;color:#556677;margin-top:14px">Espacios reducidos</p>
+    </div>
+
+    <!-- FAVICON CORREGIDO: tiene llaves + SC + burst -->
+    <div class="card" style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+      <div class="lbl" style="margin-bottom:6px">Favicon — CORREGIDO ✓</div>
+      <!-- 48px con llaves + SC + burst -->
+      <div style="width:48px;height:48px;background:linear-gradient(135deg,#0A1020,#18244A);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(74,142,232,.2)">
+        <svg viewBox="0 0 48 48" width="40" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fvL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1A50C8"/></linearGradient>
+            <linearGradient id="fvR" x1="1" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1A50C8"/></linearGradient>
+            <radialGradient id="fvC" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="40%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient>
+          </defs>
+          <!-- Llave izquierda -->
+          <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="url(#fvL)" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="#A8DDFF" stroke-width="0.8" stroke-linecap="round" opacity=".4"/>
+          <!-- Llave derecha -->
+          <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="url(#fvR)" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="#A8DDFF" stroke-width="0.8" stroke-linecap="round" opacity=".4"/>
+          <!-- Burst rays pequeños -->
+          <g transform="translate(24,24)">
+            <line x1="0" y1="-4" x2="0" y2="-10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="2.8" y1="-2.8" x2="7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="4" y1="0" x2="10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="2.8" y1="2.8" x2="7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="0" y1="4" x2="0" y2="10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-2.8" y1="2.8" x2="-7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-4" y1="0" x2="-10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-2.8" y1="-2.8" x2="-7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <!-- Puntos exteriores -->
+            <circle cx="0" cy="-9" r="1.2" fill="#5898E8" opacity=".85"/>
+            <circle cx="6.4" cy="-6.4" r="1.2" fill="#6060C8" opacity=".8"/>
+            <circle cx="9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+            <circle cx="6.4" cy="6.4" r="1.2" fill="#A020A8" opacity=".8"/>
+            <circle cx="0" cy="9" r="1.2" fill="#A020A8" opacity=".8"/>
+            <circle cx="-6.4" cy="6.4" r="1.2" fill="#A020A8" opacity=".8"/>
+            <circle cx="-9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+            <circle cx="-6.4" cy="-6.4" r="1.2" fill="#6060C8" opacity=".8"/>
+            <!-- Núcleo magenta -->
+            <circle cx="0" cy="0" r="5.5" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="0" cy="0" r="4.5" fill="url(#fvC)"/>
+            <ellipse cx="-1.2" cy="-1.5" rx="1.8" ry="1.4" fill="white" opacity=".38"/>
+            <circle cx="-1.5" cy="-2" r="0.8" fill="white" opacity=".6"/>
+          </g>
+          <!-- SC texto pequeño debajo del burst -->
+          <text x="24" y="38" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="7" font-weight="900" letter-spacing="0.5" fill="#fff" text-anchor="middle" opacity=".0">SC</text>
+        </svg>
+      </div>
+      <!-- 32px -->
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#0A1020,#18244A);border-radius:6px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(74,142,232,.2)">
+        <svg viewBox="0 0 48 48" width="26" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fv2L" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1A50C8"/></linearGradient>
+            <linearGradient id="fv2R" x1="1" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1A50C8"/></linearGradient>
+            <radialGradient id="fv2C" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="40%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient>
+          </defs>
+          <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="url(#fv2L)" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="url(#fv2R)" stroke-width="2.8" stroke-linecap="round"/>
+          <g transform="translate(24,24)">
+            <line x1="0" y1="-4" x2="0" y2="-10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="2.8" y1="-2.8" x2="7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="4" y1="0" x2="10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="2.8" y1="2.8" x2="7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="0" y1="4" x2="0" y2="10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-2.8" y1="2.8" x2="-7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-4" y1="0" x2="-10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <line x1="-2.8" y1="-2.8" x2="-7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+            <circle cx="0" cy="-9" r="1.2" fill="#5898E8" opacity=".85"/>
+            <circle cx="9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+            <circle cx="0" cy="9" r="1.2" fill="#A020A8" opacity=".8"/>
+            <circle cx="-9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+            <circle cx="0" cy="0" r="5.5" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="0" cy="0" r="4.5" fill="url(#fv2C)"/>
+            <ellipse cx="-1.2" cy="-1.5" rx="1.8" ry="1.4" fill="white" opacity=".38"/>
+          </g>
+        </svg>
+      </div>
+      <!-- 16px simplificado: llaves + punto magenta -->
+      <div style="width:20px;height:20px;background:linear-gradient(135deg,#0A1020,#18244A);border-radius:4px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(74,142,232,.2)">
+        <svg viewBox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4C8 4,6 6.5,6 9.5L6 18C6 21,4 23,2 24C4 25,6 27,6 30L6 38.5C6 41.5,8 44,12 44" fill="none" stroke="#4A8EE8" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M36 4C40 4,42 6.5,42 9.5L42 18C42 21,44 23,46 24C44 25,42 27,42 30L42 38.5C42 41.5,40 44,36 44" fill="none" stroke="#4A8EE8" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="7" fill="#5E0EA0" opacity=".95"/>
+          <circle cx="24" cy="24" r="5.5" fill="#D040E8"/>
+          <circle cx="21.5" cy="21.5" r="1.5" fill="white" opacity=".5"/>
+        </svg>
+      </div>
+      <p style="font-size:11px;color:#556677">48 · 32 · 16px<br/>Llaves + Burst ✓</p>
+    </div>
+  </div>
+</div></section>
+<div class="hr"></div>
+
+<!-- ═══ SEC 2: COLORES ═══ -->
+<section class="sec"><div class="w">
+  <div class="lbl">02 — Paleta de Colores</div>
+  <h2 class="h2">Sistema de Color Oficial</h2>
+  <p class="sub">Extraídos directamente del logo: azul eléctrico de llaves, púrpura del burst, magenta del núcleo, navy-black profundo.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:13px;margin-bottom:28px">
+    <div class="swatch"><div class="sw-c" style="background:linear-gradient(135deg,#80CCFF,#4A8EE8)"><span style="position:absolute;top:7px;right:8px;font-size:9px;color:rgba(255,255,255,.7);font-family:monospace">Brace Blue</span></div><div class="sw-i"><div class="sw-n">SC Electric Blue</div><div class="sw-h">#4A8EE8 · 74 142 232</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:linear-gradient(135deg,#A040D0,#6010A0)"><span style="position:absolute;top:7px;right:8px;font-size:9px;color:rgba(255,255,255,.7);font-family:monospace">Burst Purple</span></div><div class="sw-i"><div class="sw-n">SC Deep Purple</div><div class="sw-h">#8030C0 · 128 48 192</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:linear-gradient(135deg,#F080FF,#C020C8)"><span style="position:absolute;top:7px;right:8px;font-size:9px;color:rgba(255,255,255,.7);font-family:monospace">Core Magenta</span></div><div class="sw-i"><div class="sw-n">SC Magenta</div><div class="sw-h">#D040E8 · 208 64 232</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:linear-gradient(135deg,#4A8EE8,#8030C0 50%,#D040E8)"><span style="position:absolute;top:7px;right:8px;font-size:9px;color:rgba(255,255,255,.7);font-family:monospace">Gradient</span></div><div class="sw-i"><div class="sw-n">Brand Gradient</div><div class="sw-h">Blue→Purple→Magenta</div></div></div>
+  </div>
+  <h3 style="font-size:10px;font-weight:700;color:var(--g1);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px">Escala Dark</h3>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:28px">
+    <div class="swatch"><div class="sw-c" style="background:#0B0D12"></div><div class="sw-i"><div class="sw-n">900</div><div class="sw-h">#0B0D12</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:#10141E"></div><div class="sw-i"><div class="sw-n">800</div><div class="sw-h">#10141E</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:#161B28"></div><div class="sw-i"><div class="sw-n">700</div><div class="sw-h">#161B28</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:#1C2236"></div><div class="sw-i"><div class="sw-n">600</div><div class="sw-h">#1C2236</div></div></div>
+    <div class="swatch"><div class="sw-c" style="background:#222A42"></div><div class="sw-i"><div class="sw-n">500</div><div class="sw-h">#222A42</div></div></div>
+  </div>
+</div></section>
+<div class="hr"></div>
+
+<!-- ═══ SEC 3: TOKENS ═══ -->
+<section class="sec"><div class="w">
+  <div class="lbl">03 — Design Tokens</div>
+  <h2 class="h2">Variables de Diseño</h2>
+  <p class="sub">Tokens listos para CSS, Tailwind, Figma o cualquier design system.</p>
+  <div class="card">
+    <div class="tok"><div class="tok-p" style="background:#4A8EE8"></div><span class="tok-n">--sc-blue</span><span class="tok-v">#4A8EE8</span><span class="tok-d">Azul llaves — botones, CTAs, links</span></div>
+    <div class="tok"><div class="tok-p" style="background:#8030C0"></div><span class="tok-n">--sc-purple</span><span class="tok-v">#8030C0</span><span class="tok-d">Púrpura burst — acentos, highlights</span></div>
+    <div class="tok"><div class="tok-p" style="background:#D040E8"></div><span class="tok-n">--sc-magenta</span><span class="tok-v">#D040E8</span><span class="tok-d">Magenta núcleo — elemento diferencial</span></div>
+    <div class="tok"><div class="tok-p" style="background:#0B0D12"></div><span class="tok-n">--sc-bg-base</span><span class="tok-v">#0B0D12</span><span class="tok-d">Fondo base principal dark</span></div>
+    <div class="tok"><div class="tok-p" style="background:#161B28"></div><span class="tok-n">--sc-bg-card</span><span class="tok-v">#161B28</span><span class="tok-d">Fondo cards y paneles</span></div>
+    <div class="tok"><div class="tok-p" style="background:#FFFFFF"></div><span class="tok-n">--sc-text-primary</span><span class="tok-v">#FFFFFF</span><span class="tok-d">Texto principal headings</span></div>
+    <div class="tok"><div class="tok-p" style="background:#C8D0E0"></div><span class="tok-n">--sc-text-secondary</span><span class="tok-v">#C8D0E0</span><span class="tok-d">Texto secundario párrafos</span></div>
+    <div class="tok"><div class="tok-p" style="background:linear-gradient(135deg,#4A8EE8,#D040E8)"></div><span class="tok-n">--sc-gradient</span><span class="tok-v">135°, #4A8EE8→#D040E8</span><span class="tok-d">Gradiente de marca</span></div>
+    <div style="margin-top:18px;padding:16px;background:var(--d0);border-radius:10px;border:1px solid rgba(74,142,232,.1)">
+      <div style="font-size:10px;color:#445566;font-family:monospace;margin-bottom:10px">CSS — copiar en :root {}</div>
+      <pre style="font-family:var(--mono);font-size:11.5px;color:#C8D0E0;line-height:1.9;overflow-x:auto"><code><span style="color:#7A8AAA">/* SingularityCode Design Tokens v2.1 */</span>
+<span style="color:#4A8EE8">--sc-blue</span>:           <span style="color:#D040E8">#4A8EE8</span>;
+<span style="color:#4A8EE8">--sc-purple</span>:         <span style="color:#D040E8">#8030C0</span>;
+<span style="color:#4A8EE8">--sc-magenta</span>:        <span style="color:#D040E8">#D040E8</span>;
+<span style="color:#4A8EE8">--sc-bg-base</span>:        <span style="color:#D040E8">#0B0D12</span>;
+<span style="color:#4A8EE8">--sc-bg-surface</span>:     <span style="color:#D040E8">#10141E</span>;
+<span style="color:#4A8EE8">--sc-bg-card</span>:        <span style="color:#D040E8">#161B28</span>;
+<span style="color:#4A8EE8">--sc-text-primary</span>:   <span style="color:#D040E8">#FFFFFF</span>;
+<span style="color:#4A8EE8">--sc-text-secondary</span>: <span style="color:#D040E8">#C8D0E0</span>;
+<span style="color:#4A8EE8">--sc-text-muted</span>:     <span style="color:#D040E8">#7A8AAA</span>;
+<span style="color:#4A8EE8">--sc-border</span>:         <span style="color:#D040E8">rgba(255,255,255,0.07)</span>;
+<span style="color:#4A8EE8">--sc-gradient</span>:       <span style="color:#D040E8">linear-gradient(135deg,#4A8EE8,#D040E8)</span>;
+<span style="color:#4A8EE8">--sc-font</span>:           <span style="color:#D040E8">'Inter', system-ui, sans-serif</span>;
+<span style="color:#4A8EE8">--sc-mono</span>:           <span style="color:#D040E8">'JetBrains Mono', monospace</span>;
+<span style="color:#4A8EE8">--sc-radius</span>:         <span style="color:#D040E8">14px</span>;</code></pre>
+    </div>
+  </div>
+</div></section>
+<div class="hr"></div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- ═══ SEC 4: GUÍA COMPLETA DE USO ═══════════════════ -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="sec"><div class="w">
+  <div class="lbl">04 — Guía Completa de Uso</div>
+  <h2 class="h2">Cómo Usar Cada Elemento del Brand Kit</h2>
+  <p class="sub">Instrucciones detalladas paso a paso para implementar correctamente la identidad visual en cualquier contexto.</p>
+
+  <!-- 4.1 LOGO PRINCIPAL -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#4A8EE8,#8030C0);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">1</div>
+      <h3 style="font-size:18px;font-weight:900">Logo Principal (Horizontal)</h3>
+    </div>
+    <p style="font-size:13px;color:var(--g2);line-height:1.75;margin-bottom:16px">El logo horizontal es la versión <strong style="color:#fff">principal y prioritaria</strong>. Úsalo en el 90% de los casos: sitio web, presentaciones, documentos, redes sociales.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+      <span class="tag-where">✓ Website header</span>
+      <span class="tag-where">✓ Presentaciones</span>
+      <span class="tag-where">✓ Propuestas PDF</span>
+      <span class="tag-where">✓ Banners LinkedIn</span>
+      <span class="tag-where">✓ Email marketing</span>
+      <span class="tag-where">✓ Documentos oficiales</span>
+    </div>
+    <ul class="checklist">
+      <li><strong style="color:#fff">Fondo recomendado:</strong>&nbsp;Siempre sobre #0B0D12 (negro base) o #10141E (dark surface). Nunca sobre azules o púrpuras similares a los del logo.</li>
+      <li><strong style="color:#fff">Tamaño mínimo web:</strong>&nbsp;120px de ancho. En móvil puede reducirse a 90px pero no menos.</li>
+      <li><strong style="color:#fff">Tamaño mínimo impresión:</strong>&nbsp;4 cm de ancho. Menos de eso, usar el isotipo solo.</li>
+      <li><strong style="color:#fff">Zona de seguridad:</strong>&nbsp;Dejar espacio vacío equivalente a la altura de la letra "S" en todos sus costados.</li>
+      <li><strong style="color:#fff">Escalado:</strong>&nbsp;Siempre proporcional. Mantener Shift al escalar en cualquier software.</li>
+    </ul>
+  </div>
+
+  <!-- 4.2 FAVICON -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#4A8EE8,#8030C0);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">2</div>
+      <h3 style="font-size:18px;font-weight:900">Favicon &amp; App Icons — Cómo Implementar</h3>
+    </div>
+    <p style="font-size:13px;color:var(--g2);line-height:1.75;margin-bottom:16px">El favicon usa el <strong style="color:#fff">isotipo completo: llaves + burst + núcleo magenta</strong>. Sobre fondo oscuro translúcido. Aquí están todos los tamaños y dónde va cada uno:</p>
+
+    <div class="size-grid" style="margin-bottom:20px">
+      <div class="size-item">
+        <div class="size-box" style="width:64px;height:64px;">
+          <svg viewBox="0 0 48 48" width="50" xmlns="http://www.w3.org/2000/svg">
+            <defs><radialGradient id="g64C" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="40%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient></defs>
+            <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <g transform="translate(24,24)">
+              <line x1="0" y1="-4" x2="0" y2="-10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="2.8" y1="-2.8" x2="7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="4" y1="0" x2="10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="2.8" y1="2.8" x2="7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="0" y1="4" x2="0" y2="10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-2.8" y1="2.8" x2="-7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-4" y1="0" x2="-10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-2.8" y1="-2.8" x2="-7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <circle cx="0" cy="-9" r="1.2" fill="#5898E8" opacity=".85"/>
+              <circle cx="6.4" cy="-6.4" r="1.1" fill="#6060C8" opacity=".8"/>
+              <circle cx="9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+              <circle cx="6.4" cy="6.4" r="1.1" fill="#A020A8" opacity=".8"/>
+              <circle cx="0" cy="9" r="1.2" fill="#A020A8" opacity=".8"/>
+              <circle cx="-6.4" cy="6.4" r="1.1" fill="#A020A8" opacity=".8"/>
+              <circle cx="-9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+              <circle cx="-6.4" cy="-6.4" r="1.1" fill="#6060C8" opacity=".8"/>
+              <circle cx="0" cy="0" r="5.5" fill="#5E0EA0" opacity=".95"/>
+              <circle cx="0" cy="0" r="4.5" fill="url(#g64C)"/>
+              <ellipse cx="-1.2" cy="-1.5" rx="1.8" ry="1.4" fill="white" opacity=".38"/>
+            </g>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">64×64</div>
+        <div style="font-size:10px;color:var(--g1)">Web general</div>
+      </div>
+      <div class="size-item">
+        <div class="size-box" style="width:48px;height:48px;">
+          <svg viewBox="0 0 48 48" width="38" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="7" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="24" cy="24" r="5.5" fill="#D040E8"/>
+            <circle cx="21.5" cy="21.5" r="1.5" fill="white" opacity=".5"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">48×48</div>
+        <div style="font-size:10px;color:var(--g1)">Browser tab</div>
+      </div>
+      <div class="size-item">
+        <div class="size-box" style="width:40px;height:40px;">
+          <svg viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4C8 4,6 6.5,6 9.5L6 18C6 21,4 23,2 24C4 25,6 27,6 30L6 38.5C6 41.5,8 44,12 44" fill="none" stroke="#4A8EE8" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M36 4C40 4,42 6.5,42 9.5L42 18C42 21,44 23,46 24C44 25,42 27,42 30L42 38.5C42 41.5,40 44,36 44" fill="none" stroke="#4A8EE8" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="7" fill="#5E0EA0" opacity=".95"/>
+            <circle cx="24" cy="24" r="5.5" fill="#D040E8"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">32×32</div>
+        <div style="font-size:10px;color:var(--g1)">Favicon std</div>
+      </div>
+      <div class="size-item">
+        <div class="size-box" style="width:28px;height:28px;">
+          <svg viewBox="0 0 48 48" width="22" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4C8 4,6 6.5,6 9.5L6 18C6 21,4 23,2 24C4 25,6 27,6 30L6 38.5C6 41.5,8 44,12 44" fill="none" stroke="#4A8EE8" stroke-width="4" stroke-linecap="round"/>
+            <path d="M36 4C40 4,42 6.5,42 9.5L42 18C42 21,44 23,46 24C44 25,42 27,42 30L42 38.5C42 41.5,40 44,36 44" fill="none" stroke="#4A8EE8" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="6" fill="#D040E8"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">16×16</div>
+        <div style="font-size:10px;color:var(--g1)">Mínimo</div>
+      </div>
+      <div class="size-item">
+        <div class="size-box" style="width:80px;height:80px;border-radius:18px;">
+          <svg viewBox="0 0 48 48" width="60" xmlns="http://www.w3.org/2000/svg">
+            <defs><radialGradient id="g512C" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="40%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient></defs>
+            <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M10 5C6 5,4.5 7,4.5 10L4.5 18C4.5 21,2.5 23,1 24C2.5 25,4.5 27,4.5 30L4.5 38C4.5 41,6 43,10 43" fill="none" stroke="#A8DDFF" stroke-width="0.8" stroke-linecap="round" opacity=".4"/>
+            <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="#4A8EE8" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M38 5C42 5,43.5 7,43.5 10L43.5 18C43.5 21,45.5 23,47 24C45.5 25,43.5 27,43.5 30L43.5 38C43.5 41,42 43,38 43" fill="none" stroke="#A8DDFF" stroke-width="0.8" stroke-linecap="round" opacity=".4"/>
+            <g transform="translate(24,24)">
+              <line x1="0" y1="-4" x2="0" y2="-10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="2.8" y1="-2.8" x2="7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="4" y1="0" x2="10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="2.8" y1="2.8" x2="7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="0" y1="4" x2="0" y2="10" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-2.8" y1="2.8" x2="-7.1" y2="7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-4" y1="0" x2="-10" y2="0" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <line x1="-2.8" y1="-2.8" x2="-7.1" y2="-7.1" stroke="#3D70D8" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+              <circle cx="0" cy="-9" r="1.2" fill="#5898E8" opacity=".85"/>
+              <circle cx="6.4" cy="-6.4" r="1.1" fill="#6060C8" opacity=".8"/>
+              <circle cx="9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+              <circle cx="6.4" cy="6.4" r="1.1" fill="#A020A8" opacity=".8"/>
+              <circle cx="0" cy="9" r="1.2" fill="#A020A8" opacity=".8"/>
+              <circle cx="-6.4" cy="6.4" r="1.1" fill="#A020A8" opacity=".8"/>
+              <circle cx="-9" cy="0" r="1.2" fill="#8040B0" opacity=".8"/>
+              <circle cx="-6.4" cy="-6.4" r="1.1" fill="#6060C8" opacity=".8"/>
+              <circle cx="0" cy="0" r="5.5" fill="#5E0EA0" opacity=".95"/>
+              <circle cx="0" cy="0" r="4.5" fill="url(#g512C)"/>
+              <ellipse cx="-1.2" cy="-1.5" rx="1.8" ry="1.4" fill="white" opacity=".38"/>
+              <circle cx="-1.5" cy="-2" r="0.8" fill="white" opacity=".6"/>
+            </g>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">512×512</div>
+        <div style="font-size:10px;color:var(--g1)">App icon</div>
+      </div>
+      <div class="size-item">
+        <div class="size-box" style="width:80px;height:80px;border-radius:20px;">
+          <svg viewBox="0 0 148 160" width="60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1024L" x1="0" y1="0" x2=".35" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+              <linearGradient id="g1024R" x1="1" y1="0" x2=".65" y2="1"><stop offset="0%" stop-color="#80CCFF"/><stop offset="100%" stop-color="#1648B0"/></linearGradient>
+              <radialGradient id="g1024C" cx="36%" cy="30%" r="65%"><stop offset="0%" stop-color="#FFB0FF"/><stop offset="30%" stop-color="#E060F0"/><stop offset="100%" stop-color="#7818A8"/></radialGradient>
+            </defs>
+            <path d="M38 6C28 6,22 12,22 20L22 42C22 50,15 57,8 74C15 91,22 98,22 106L22 128C22 136,28 142,38 142" fill="none" stroke="url(#g1024L)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M100 6C110 6,116 12,116 20L116 42C116 50,123 57,130 74C123 91,116 98,116 106L116 128C116 136,110 142,100 142" fill="none" stroke="url(#g1024R)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M38 6C28 6,22 12,22 20L22 42C22 50,15 57,8 74C15 91,22 98,22 106L22 128C22 136,28 142,38 142" fill="none" stroke="#A8DDFF" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+            <path d="M100 6C110 6,116 12,116 20L116 42C116 50,123 57,130 74C123 91,116 98,116 106L116 128C116 136,110 142,100 142" fill="none" stroke="#A8DDFF" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+            <g transform="translate(69,74)">
+              <line x1="0" y1="-7" x2="0" y2="-46" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="5" y1="-5" x2="32" y2="-32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="7" y1="0" x2="46" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="5" y1="5" x2="32" y2="32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="0" y1="7" x2="0" y2="46" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="-5" y1="5" x2="-32" y2="32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="-7" y1="0" x2="-46" y2="0" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <line x1="-5" y1="-5" x2="-32" y2="-32" stroke="#3D70D8" stroke-width="1.1" opacity=".75" stroke-linecap="round"/>
+              <circle cx="0" cy="-42" r="2" fill="#5898E8" opacity=".8"/><circle cx="29" cy="-29" r="2" fill="#5898E8" opacity=".8"/>
+              <circle cx="42" cy="0" r="2" fill="#5898E8" opacity=".8"/><circle cx="0" cy="42" r="2" fill="#5898E8" opacity=".8"/>
+              <circle cx="-42" cy="0" r="2" fill="#5898E8" opacity=".8"/>
+              <circle cx="0" cy="-16" r="3.5" fill="#9828C0" opacity=".9"/><circle cx="11" cy="-11" r="2.8" fill="#A020B8" opacity=".88"/>
+              <circle cx="16" cy="0" r="3.5" fill="#A820B0" opacity=".9"/>
+              <circle cx="0" cy="0" r="10" fill="#5E0EA0" opacity=".95"/>
+              <circle cx="0" cy="0" r="8.5" fill="url(#g1024C)"/>
+              <ellipse cx="-2.2" cy="-2.8" rx="3.2" ry="2.5" fill="white" opacity=".3"/>
+            </g>
+          </svg>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#fff">1024×1024</div>
+        <div style="font-size:10px;color:var(--g1)">iOS / macOS</div>
+      </div>
+    </div>
+
+    <div class="code-block">
+<span style="color:#7A8AAA">/* HTML — Implementar favicon en tu sitio web */</span>
+<span style="color:#4A8EE8">&lt;head&gt;</span>
+  <span style="color:#72C0FF">&lt;!-- Favicon básico --&gt;</span>
+  &lt;link rel="icon" type="image/svg+xml" href="<span style="color:#22C55E">/favicon.svg</span>"&gt;
+  &lt;link rel="icon" type="image/png" sizes="32x32" href="<span style="color:#22C55E">/favicon-32.png</span>"&gt;
+  &lt;link rel="icon" type="image/png" sizes="16x16" href="<span style="color:#22C55E">/favicon-16.png</span>"&gt;
+
+  <span style="color:#72C0FF">&lt;!-- App iOS (fondo oscuro) --&gt;</span>
+  &lt;link rel="apple-touch-icon" sizes="180x180" href="<span style="color:#22C55E">/apple-touch-icon.png</span>"&gt;
+
+  <span style="color:#72C0FF">&lt;!-- Android / PWA --&gt;</span>
+  &lt;link rel="manifest" href="<span style="color:#22C55E">/site.webmanifest</span>"&gt;
+  &lt;meta name="theme-color" content="<span style="color:#22C55E">#0B0D12</span>"&gt;
+<span style="color:#4A8EE8">&lt;/head&gt;</span>
+    </div>
+  </div>
+
+  <!-- 4.3 COLORES -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#4A8EE8,#8030C0);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">3</div>
+      <h3 style="font-size:18px;font-weight:900">Colores — Cuándo Usar Cada Uno</h3>
+    </div>
+    <div class="g3">
+      <div style="background:rgba(74,142,232,.08);border:1px solid rgba(74,142,232,.2);border-radius:12px;padding:16px">
+        <div style="width:36px;height:36px;background:#4A8EE8;border-radius:8px;margin-bottom:10px"></div>
+        <div style="font-size:13px;font-weight:800;margin-bottom:6px">SC Electric Blue<br/><span style="font-family:monospace;color:var(--b2)">#4A8EE8</span></div>
+        <div style="font-size:12px;color:var(--g2);line-height:1.7">→ Botones CTA principales<br/>→ Links y elementos interactivos<br/>→ Bordes de cards activas<br/>→ Iconos de navegación<br/>→ Underlines decorativos</div>
+      </div>
+      <div style="background:rgba(128,48,192,.08);border:1px solid rgba(128,48,192,.2);border-radius:12px;padding:16px">
+        <div style="width:36px;height:36px;background:#8030C0;border-radius:8px;margin-bottom:10px"></div>
+        <div style="font-size:13px;font-weight:800;margin-bottom:6px">SC Deep Purple<br/><span style="font-family:monospace;color:#B060E8">#8030C0</span></div>
+        <div style="font-size:12px;color:var(--g2);line-height:1.7">→ Fondos de secciones accent<br/>→ Badges y tags secundarios<br/>→ Glow effects de fondo<br/>→ Gradientes intermedios<br/>→ Hover states de botones</div>
+      </div>
+      <div style="background:rgba(208,64,232,.08);border:1px solid rgba(208,64,232,.2);border-radius:12px;padding:16px">
+        <div style="width:36px;height:36px;background:#D040E8;border-radius:8px;margin-bottom:10px"></div>
+        <div style="font-size:13px;font-weight:800;margin-bottom:6px">SC Magenta<br/><span style="font-family:monospace;color:#E060F0">#D040E8</span></div>
+        <div style="font-size:12px;color:var(--g2);line-height:1.7">→ Highlights especiales únicos<br/>→ Texto en gradiente de marca<br/>→ Indicadores de estado activo<br/>→ Elementos de máxima atención<br/>→ Diferenciador de marca</div>
+      </div>
+    </div>
+    <div class="code-block" style="margin-top:16px">
+<span style="color:#7A8AAA">/* Ejemplos de uso en CSS */</span>
+.btn-primary { background: <span style="color:#4A8EE8">var(--sc-blue)</span>; }          <span style="color:#7A8AAA">/* CTA principal */</span>
+.btn-primary:hover { background: <span style="color:#8030C0">var(--sc-purple)</span>; }   <span style="color:#7A8AAA">/* Hover */</span>
+.hero-gradient { background: <span style="color:#4A8EE8">var(--sc-gradient)</span>; }      <span style="color:#7A8AAA">/* Gradiente */</span>
+.text-accent { color: <span style="color:#D040E8">var(--sc-magenta)</span>; }              <span style="color:#7A8AAA">/* Magenta único */</span>
+.card { background: <span style="color:#161B28">var(--sc-bg-card)</span>; }               <span style="color:#7A8AAA">/* Cards */</span>
+    </div>
+  </div>
+
+  <!-- 4.4 TIPOGRAFÍA -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#4A8EE8,#8030C0);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">4</div>
+      <h3 style="font-size:18px;font-weight:900">Tipografía — Escalas y Cuándo Aplicar</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">Display</span></div>
+        <div style="flex:1"><div style="font-size:28px;font-weight:900;letter-spacing:-1.5px;line-height:1">Singularity</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">Inter 900 · 48-72px · -2px<br/>Solo para hero headlines</div>
+      </div>
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">H1</span></div>
+        <div style="flex:1"><div style="font-size:22px;font-weight:800;letter-spacing:-1px">Software Development</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">Inter 800 · 32-40px · -1px<br/>Títulos de sección principal</div>
+      </div>
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">H2</span></div>
+        <div style="flex:1"><div style="font-size:16px;font-weight:700;letter-spacing:-.5px">Soluciones tecnológicas</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">Inter 700 · 22-26px · -0.5px<br/>Subsecciones y cards</div>
+      </div>
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">Body</span></div>
+        <div style="flex:1"><div style="font-size:14px;color:#C8D0E0;line-height:1.7">Texto descriptivo y párrafos de contenido general.</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">Inter 400 · 14-16px · 1.7 line-height<br/>Texto corrido</div>
+      </div>
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">Mono</span></div>
+        <div style="flex:1"><div style="font-family:var(--mono);font-size:13px;color:#72C0FF">const sc = new SingularityCode();</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">JetBrains Mono 500 · 12-14px<br/>Código, datos técnicos, tokens</div>
+      </div>
+      <div style="background:var(--d0);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;display:flex;gap:16px;align-items:center">
+        <div style="min-width:90px"><span class="tag-when">Label</span></div>
+        <div style="flex:1"><div style="font-size:10px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--b2)">SECCIÓN — TÍTULO</div></div>
+        <div style="font-size:11px;color:var(--g1);min-width:200px">Inter 700 · 10px · 3.5px tracking<br/>Eyebrows y etiquetas</div>
+      </div>
+    </div>
+    <div class="code-block">
+<span style="color:#7A8AAA">/* Google Fonts — Agregar en &lt;head&gt; */</span>
+&lt;link href="https://fonts.googleapis.com/css2?family=<span style="color:#4A8EE8">Inter</span>:wght@300;400;500;600;700;800;900
+      &amp;family=<span style="color:#D040E8">JetBrains+Mono</span>:wght@400;500;600&display=swap" rel="stylesheet"&gt;
+    </div>
+  </div>
+
+  <!-- 4.5 VARIANTES POR CONTEXTO -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#4A8EE8,#8030C0);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">5</div>
+      <h3 style="font-size:18px;font-weight:900">¿Qué Versión del Logo Usar? — Tabla de Decisión</h3>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="background:var(--d0)">
+            <th style="padding:12px 14px;text-align:left;color:var(--b2);font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)">Contexto</th>
+            <th style="padding:12px 14px;text-align:left;color:var(--b2);font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)">Versión Recomendada</th>
+            <th style="padding:12px 14px;text-align:left;color:var(--b2);font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)">Tamaño</th>
+            <th style="padding:12px 14px;text-align:left;color:var(--b2);font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)">Fondo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Website header</td><td style="padding:11px 14px;color:#22C55E">Logo horizontal dark</td><td style="padding:11px 14px;color:var(--g2)">min 120px ancho</td><td style="padding:11px 14px;color:var(--g2)">#0B0D12</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Browser favicon / tab</td><td style="padding:11px 14px;color:#22C55E">Isotipo (llaves+burst) 32px</td><td style="padding:11px 14px;color:var(--g2)">32×32 / 48×48</td><td style="padding:11px 14px;color:var(--g2)">Transparente</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">App móvil iOS/Android</td><td style="padding:11px 14px;color:#22C55E">Isotipo sobre fondo dark</td><td style="padding:11px 14px;color:var(--g2)">1024×1024</td><td style="padding:11px 14px;color:var(--g2)">#0A1020</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Presentación PowerPoint</td><td style="padding:11px 14px;color:#22C55E">Logo horizontal dark</td><td style="padding:11px 14px;color:var(--g2)">min 4cm ancho</td><td style="padding:11px 14px;color:var(--g2)">#0B0D12 o #10141E</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Impresión 1 color</td><td style="padding:11px 14px;color:#22C55E">Monocromático blanco/negro</td><td style="padding:11px 14px;color:var(--g2)">min 4cm</td><td style="padding:11px 14px;color:var(--g2)">Negro o blanco</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">LinkedIn / Twitter avatar</td><td style="padding:11px 14px;color:#22C55E">Isotipo cuadrado</td><td style="padding:11px 14px;color:var(--g2)">400×400</td><td style="padding:11px 14px;color:var(--g2)">#0A1020</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">LinkedIn banner (cover)</td><td style="padding:11px 14px;color:#22C55E">Logo horizontal dark</td><td style="padding:11px 14px;color:var(--g2)">1584×396px</td><td style="padding:11px 14px;color:var(--g2)">#0B0D12 con grid</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Firma de email</td><td style="padding:11px 14px;color:#22C55E">Wordmark (texto, no SVG)</td><td style="padding:11px 14px;color:var(--g2)">auto</td><td style="padding:11px 14px;color:var(--g2)">Blanco (email)</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:11px 14px;color:#fff">Tarjeta de presentación</td><td style="padding:11px 14px;color:#22C55E">Isotipo + wordmark</td><td style="padding:11px 14px;color:var(--g2)">segun diseño</td><td style="padding:11px 14px;color:var(--g2)">#0B1020</td></tr>
+          <tr><td style="padding:11px 14px;color:#fff">Espacio muy reducido</td><td style="padding:11px 14px;color:#22C55E">Versión compacta {SC}</td><td style="padding:11px 14px;color:var(--g2)">min 24px</td><td style="padding:11px 14px;color:var(--g2)">Cualquier dark</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4.6 ERRORES COMUNES -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#EF4444,#B91C1C);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">!</div>
+      <h3 style="font-size:18px;font-weight:900">Errores Más Comunes — Cómo Evitarlos</h3>
+    </div>
+    <div class="g2">
+      <div>
+        <h4 style="font-size:12px;font-weight:700;color:#EF4444;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">✗ Lo que NO debes hacer</h4>
+        <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">Usar JPEG/PNG del logo en web</div><div class="desc">Siempre usar el archivo SVG para web. El PNG es solo para plataformas que no aceptan SVG (email, algunos CMS).</div></div></div>
+        <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">Captura de pantalla del Brand Kit</div><div class="desc">No recortar el logo de este HTML. Exportar correctamente desde herramienta de diseño (Figma, Illustrator).</div></div></div>
+        <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">Cambiar el tracking del wordmark</div><div class="desc">El letter-spacing de -2px en el logo es intencional. No alterar nunca.</div></div></div>
+        <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">Favicon sin llaves (solo SC texto)</div><div class="desc">El favicon SIEMPRE debe incluir las llaves { } como elemento identitario. Ya corregido en v2.1.</div></div></div>
+        <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">Logo sobre fondo de color similar</div><div class="desc">Nunca el logo azul/magenta sobre fondos azules o púrpuras. Perderá visibilidad y contraste.</div></div></div>
+      </div>
+      <div>
+        <h4 style="font-size:12px;font-weight:700;color:#22C55E;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">✓ Lo que SÍ debes hacer</h4>
+        <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Exportar SVG desde código fuente</div><div class="desc">Copiar el SVG del isotipo directamente de este HTML y guardarlo como .svg limpio para uso en Figma/Illustrator.</div></div></div>
+        <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Fondo oscuro siempre</div><div class="desc">El sistema dark es la identidad principal. Mantener fondos #0B0D12 o #10141E como base en todos los materiales digitales.</div></div></div>
+        <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Usar los design tokens en CSS</div><div class="desc">Copiar los tokens de la sección 03 como variables CSS en tu proyecto para garantizar consistencia automática.</div></div></div>
+        <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Isotipo con llaves en favicons</div><div class="desc">Las llaves { } son el elemento más reconocible de la marca. Siempre deben aparecer incluso en 16×16px.</div></div></div>
+        <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Mantener zona de seguridad</div><div class="desc">Respetar mínimo 1× la altura del isotipo de espacio libre en todos los costados del logo.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4.7 CÓMO EXTRAER EL SVG -->
+  <div class="guide-section">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#22C55E,#16A34A);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">↓</div>
+      <h3 style="font-size:18px;font-weight:900">Cómo Extraer los Archivos para Uso Real</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="guide-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Extraer el SVG del logo</h4>
+          <p>Abre este archivo HTML en un editor de texto. Busca la etiqueta <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230"</code> en la sección HERO. Copia todo el bloque SVG desde esa etiqueta hasta el <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">&lt;/svg&gt;</code> correspondiente. Pégalo en un archivo nuevo <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">logo-horizontal.svg</code>.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Extraer el favicon corregido (con llaves)</h4>
+          <p>En la sección de Favicon (SEC 1, cuarta card), el primer bloque <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">viewBox="0 0 48 48"</code> es el favicon con llaves + burst. Copiarlo a <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">favicon.svg</code>.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Generar PNG desde SVG (para favicons y apps)</h4>
+          <p>Con el archivo SVG listo, usa alguna de estas herramientas gratuitas para generar todos los tamaños PNG necesarios:</p>
+          <div class="code-block">
+# Herramientas online gratuitas:
+→ <span style="color:#4A8EE8">realfavicongenerator.net</span>   — Genera .ico, PNG todos los tamaños, manifest.json
+→ <span style="color:#4A8EE8">favicon.io</span>                 — SVG a favicon en 1 click
+→ <span style="color:#4A8EE8">squoosh.app</span>               — Optimizar PNG para web (de Google)
+→ <span style="color:#4A8EE8">cloudconvert.com</span>          — SVG → PNG en cualquier tamaño
+
+# Con Inkscape (gratis, desktop):
+inkscape favicon.svg --export-png=favicon-512.png --export-width=512
+inkscape favicon.svg --export-png=favicon-256.png --export-width=256
+inkscape favicon.svg --export-png=favicon-128.png --export-width=128
+inkscape favicon.svg --export-png=favicon-64.png  --export-width=64
+inkscape favicon.svg --export-png=favicon-32.png  --export-width=32
+inkscape favicon.svg --export-png=favicon-16.png  --export-width=16
+          </div>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Importar en Figma</h4>
+          <p>En Figma: File → Import → selecciona el archivo <code style="background:rgba(74,142,232,.15);padding:2px 7px;border-radius:4px;color:#72C0FF">logo-horizontal.svg</code>. Se importa como frame vectorial editable. Para los colores, crea una librería de estilos con los Design Tokens de la sección 03.</p>
+          <div class="code-block">
+# Colores a agregar como estilos en Figma:
+SC/Blue       #4A8EE8  — CTAs y links
+SC/Purple     #8030C0  — Acentos
+SC/Magenta    #D040E8  — Diferenciador
+SC/BG/Base    #0B0D12  — Fondo principal
+SC/BG/Surface #10141E  — Superficies
+SC/BG/Card    #161B28  — Cards
+SC/Text/Primary   #FFFFFF
+SC/Text/Secondary #C8D0E0
+SC/Text/Muted     #7A8AAA
+          </div>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Implementar en proyecto web (React / HTML)</h4>
+          <div class="code-block">
+<span style="color:#7A8AAA">/* Opción 1: SVG inline (recomendado — escala perfecto) */</span>
+&lt;img src="logo.svg" alt="SingularityCode" width="180" height="auto"&gt;
+
+<span style="color:#7A8AAA">/* Opción 2: Como componente React */</span>
+<span style="color:#4A8EE8">import</span> { ReactComponent <span style="color:#4A8EE8">as</span> Logo } <span style="color:#4A8EE8">from</span> <span style="color:#22C55E">'./logo.svg'</span>;
+<span style="color:#4A8EE8">const</span> Header = () =&gt; (
+  &lt;header&gt;
+    &lt;Logo width={<span style="color:#F59E0B">180</span>} aria-label="SingularityCode" /&gt;
+  &lt;/header&gt;
+);
+
+<span style="color:#7A8AAA">/* Opción 3: Next.js con next/image */</span>
+<span style="color:#4A8EE8">import</span> Image <span style="color:#4A8EE8">from</span> <span style="color:#22C55E">'next/image'</span>;
+&lt;Image src="/logo.svg" width={<span style="color:#F59E0B">180</span>} height={<span style="color:#F59E0B">54</span>} alt="SingularityCode" /&gt;
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4.8 CHECKLIST ENTREGA -->
+  <div class="guide-section" style="background:rgba(74,142,232,.06);border-color:rgba(74,142,232,.2)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#22C55E,#16A34A);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900">✓</div>
+      <h3 style="font-size:18px;font-weight:900">Checklist Completo — Todo lo que incluye este Brand Kit v2.1</h3>
+    </div>
+    <div class="g2">
+      <div>
+        <h4 style="font-size:11px;font-weight:700;color:var(--b2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Logos &amp; Variantes</h4>
+        <ul class="checklist">
+          <li>Logo horizontal (dark) — versión principal</li>
+          <li>Logo light mode (sobre fondo claro)</li>
+          <li>Logo monocromático blanco</li>
+          <li>Solo isotipo (llaves + burst + núcleo)</li>
+          <li>Solo wordmark (texto "SingularityCode")</li>
+          <li>Versión compacta {SC}</li>
+          <li>Favicon 48px — con llaves ✓ CORREGIDO v2.1</li>
+          <li>Favicon 32px — con llaves ✓ CORREGIDO v2.1</li>
+          <li>Favicon 16px — simplificado con llaves ✓</li>
+          <li>App Icon 512×512 (full detail)</li>
+          <li>App Icon 1024×1024 (iOS/macOS)</li>
+          <li>Tabla de decisión: qué versión usar cuándo</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:11px;font-weight:700;color:var(--b2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Sistema de Diseño</h4>
+        <ul class="checklist">
+          <li>Paleta de colores oficial (4 colores primarios)</li>
+          <li>Escala de grises dark (5 niveles)</li>
+          <li>Colores semánticos (success, warning, error, info)</li>
+          <li>Tipografía completa (6 escalas documentadas)</li>
+          <li>Design tokens CSS listos para copiar</li>
+          <li>Guía de cuándo usar cada color</li>
+          <li>Guía de cuándo usar cada escala tipográfica</li>
+          <li>Guía de uso correcto e incorrecto</li>
+          <li>Zona de seguridad (clear space)</li>
+          <li>Tamaños mínimos de logo</li>
+        </ul>
+        <h4 style="font-size:11px;font-weight:700;color:var(--b2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;margin-top:16px">Mockups Corporativos</h4>
+        <ul class="checklist">
+          <li>Tarjeta de presentación (anverso y reverso)</li>
+          <li>Landing page con hero completo</li>
+          <li>Perfil LinkedIn (banner + avatar)</li>
+          <li>Firma de email (light, para clientes)</li>
+          <li>Hoodie negro y gris</li>
+          <li>Instrucciones de extracción SVG</li>
+          <li>Guía de implementación web/React</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding:16px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:10px">
+      <div style="font-size:13px;font-weight:700;color:#22C55E;margin-bottom:6px">✓ Corrección aplicada en v2.1</div>
+      <div style="font-size:13px;color:var(--g2)">El favicon ahora incluye correctamente las llaves { } en todos los tamaños (48px, 32px, 16px), manteniendo el elemento identitario principal de la marca visible incluso a escala mínima.</div>
+    </div>
+  </div>
+
+</div></section>
+<div class="hr"></div>
+
+<!-- ═══ SEC 5: USOS CORRECTOS ═══ -->
+<section class="sec"><div class="w">
+  <div class="lbl">05 — Guía de Uso</div>
+  <h2 class="h2">Usos Correctos e Incorrectos</h2>
+  <p class="sub">Reglas que protegen la coherencia visual de la marca.</p>
+  <div class="g2" style="margin-bottom:24px">
+    <div class="card">
+      <h3 style="color:#22C55E;font-size:13px;font-weight:800;margin-bottom:16px">✓ Usos Correctos</h3>
+      <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Logo sobre fondos dark oficiales</div><div class="desc">Siempre sobre #0B0D12 o #10141E para máximo contraste e impacto.</div></div></div>
+      <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Versión mono en impresión de un color</div><div class="desc">Solo blanco o negro puro. Sin degradados ni colores brand.</div></div></div>
+      <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Zona de seguridad respetada</div><div class="desc">Mínimo 1× altura del isotipo de espacio libre en todos los lados.</div></div></div>
+      <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">Favicon con llaves siempre (v2.1)</div><div class="desc">El isotipo con llaves { } es obligatorio incluso en 16×16px.</div></div></div>
+      <div class="gline"><div class="gico bok">✓</div><div class="gt"><div class="title">SVG para web, PNG para email/doc</div><div class="desc">SVG escala perfecto en cualquier resolución. PNG para entornos que no aceptan SVG.</div></div></div>
+    </div>
+    <div class="card">
+      <h3 style="color:#EF4444;font-size:13px;font-weight:800;margin-bottom:16px">✗ Usos Incorrectos</h3>
+      <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">No distorsionar proporciones</div><div class="desc">Nunca estirar o aplastar. Siempre escalar proporcionalmente.</div></div></div>
+      <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">No recolorear elementos</div><div class="desc">Solo colores oficiales. No cambiar el azul de llaves ni el magenta del núcleo.</div></div></div>
+      <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">No favicon sin llaves</div><div class="desc">Las llaves son la firma visual de la marca. Nunca usar solo el burst o solo "SC" como favicon.</div></div></div>
+      <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">No colocar sobre fondos similares</div><div class="desc">El logo a color nunca sobre fondos azules o púrpuras similares al logo.</div></div></div>
+      <div class="gline"><div class="gico bno">✗</div><div class="gt"><div class="title">No cambiar tipografía del wordmark</div><div class="desc">Solo Inter 800. No sustituir por otras fuentes ni alterar el tracking.</div></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer style="padding:52px 36px;background:var(--d1);border-top:1px solid rgba(255,255,255,.05);text-align:center">
+  <div style="font-size:17px;font-weight:900;margin-bottom:5px;letter-spacing:-.3px">Singularity<span style="color:var(--b2)">Code</span></div>
+  <div style="font-size:8.5px;color:#445566;letter-spacing:4px;margin-bottom:18px">SOFTWARE DEVELOPMENT &amp; IT CONSULTING</div>
+  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">
+    <span class="pill pb">Brand Kit v2.1</span>
+    <span class="pill pp">Logo System</span>
+    <span class="pill pg">Production Ready</span>
+    <span class="pill pm">Favicons Fixed</span>
+  </div>
+  <div style="max-width:520px;margin:0 auto 16px;font-size:12px;color:#2A3A4A;line-height:1.7">
+    Actualización v2.1: Favicon corregido con llaves { } en todos los tamaños + Guía completa de uso paso a paso.
+  </div>
+  <p style="font-size:11px;color:#1E2A3A">© 2025 SingularityCode — Uso interno y partners autorizados</p>
+</footer>
+</body>
+</html>
