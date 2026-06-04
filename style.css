@@ -78,22 +78,22 @@ ul {
    LIGHT MODE
 ════════════════════════════════════════ */
 body.light {
-   --bg0: #f8fafc;
-   --bg1: #ffffff;
-   --bg2: #f1f5f9;
-   --bg3: #e8edf4;
-   --bg4: #dde3ec;
-   --brd: rgba(0, 0, 0, .07);
-   --brd2: rgba(0, 0, 0, .12);
-   --brd3: rgba(0, 0, 0, .18);
+   --bg0: #eef1f6;
+   --bg1: #f4f7fb;
+   --bg2: #e8edf5;
+   --bg3: #dde3ee;
+   --bg4: #d2d9e7;
+   --brd: rgba(0, 0, 0, .09);
+   --brd2: rgba(0, 0, 0, .14);
+   --brd3: rgba(0, 0, 0, .20);
    --t1: #0f1923;
    --t2: #374151;
    --t3: #6b7280;
    --t4: #9ca3af;
    --hero-bg: #0f1923;
-   --nav-solid-bg: rgba(248, 250, 252, .95);
-   --mob-bg: #ffffff;
-   --sh: 0 0 0 1px rgba(0, 0, 0, .06), 0 4px 24px rgba(0, 0, 0, .08);
+   --nav-solid-bg: rgba(238, 241, 246, .95);
+   --mob-bg: #f4f7fb;
+   --sh: 0 0 0 1px rgba(0, 0, 0, .07), 0 4px 24px rgba(0, 0, 0, .09);
    --shg: 0 0 40px rgba(5, 188, 169, .2), 0 0 0 1px rgba(5, 188, 169, .3);
    --shmd: 0 4px 20px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .06);
    color-scheme: light;
