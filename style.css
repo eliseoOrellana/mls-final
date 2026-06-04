@@ -83,6 +83,10 @@ body.light {
    --bg2: #e8edf5;
    --bg3: #dde3ee;
    --bg4: #d2d9e7;
+   /* teal tints más opacos para que sean visibles sobre fondos claros */
+   --gl: rgba(5, 188, 169, .16);
+   --gl2: rgba(5, 188, 169, .28);
+   --glt: rgba(5, 188, 169, .09);
    --brd: rgba(0, 0, 0, .09);
    --brd2: rgba(0, 0, 0, .14);
    --brd3: rgba(0, 0, 0, .20);
@@ -93,9 +97,10 @@ body.light {
    --hero-bg: #0f1923;
    --nav-solid-bg: rgba(238, 241, 246, .95);
    --mob-bg: #f4f7fb;
-   --sh: 0 0 0 1px rgba(0, 0, 0, .07), 0 4px 24px rgba(0, 0, 0, .09);
-   --shg: 0 0 40px rgba(5, 188, 169, .2), 0 0 0 1px rgba(5, 188, 169, .3);
-   --shmd: 0 4px 20px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .06);
+   /* sombras con más peso para crear profundidad sobre fondos claros */
+   --sh: 0 0 0 1px rgba(0, 0, 0, .08), 0 4px 24px rgba(0, 0, 0, .12);
+   --shg: 0 0 40px rgba(5, 188, 169, .22), 0 0 0 1px rgba(5, 188, 169, .32);
+   --shmd: 0 4px 20px rgba(0, 0, 0, .13), 0 1px 4px rgba(0, 0, 0, .07);
    color-scheme: light;
 }
 
@@ -2497,8 +2502,8 @@ body.light .b2-img img {
 }
 
 body.light .cta-sec {
-   background: linear-gradient(180deg, #f8fafc 0%, #eef4f8 100%);
-   border-top: 1px solid rgba(0,0,0,.08);
+   background: linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 100%);
+   border-top: 1px solid var(--brd);
 }
 
 body.light .cta-bg {
@@ -2528,13 +2533,13 @@ body.light .cta-legal svg {
 
 body.light .btn-ghost {
    color: var(--t2);
-   border: 1px solid rgba(0,0,0,.12);
-   background: rgba(255,255,255,.55);
-   backdrop-filter: blur(10px);
+   border: 1px solid var(--brd2);
+   background: var(--bg1);
+   backdrop-filter: none;
 }
 
 body.light .btn-ghost:hover {
-   background: rgba(255,255,255,.9);
+   background: var(--bg2);
    border-color: var(--g);
    color: var(--t1);
 }
@@ -2708,8 +2713,8 @@ footer {
 }
 
 body.light footer {
-   border-top: 1px solid rgba(0, 0, 0, .10);
-   background: #f8fafc;
+   border-top: 1px solid var(--brd);
+   background: var(--bg2);
 }
 
 body.light .fg {
@@ -2744,8 +2749,8 @@ body.light .fs:hover {
 }
 
 body.light .nl-f input {
-   background: rgba(0, 0, 0, .03);
-   border: 1px solid rgba(0, 0, 0, .08);
+   background: rgba(0, 0, 0, .06);
+   border: 1px solid rgba(0, 0, 0, .13);
    color: var(--t1);
 }
 
