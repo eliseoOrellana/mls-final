@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
     rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favIcon/favicon.ico">
-  <link rel="apple-touch-icon" href="img/favIcon/favicon.ico">
+    <link rel="icon" type="image/png" href="img/logos/faiicon.png">
+  <link rel="apple-touch-icon" href="img/logos/faiicon.png">
   <link rel="stylesheet" href="style.css">
   <script>
     (function () { var t = localStorage.getItem("mls-theme") || "dark"; if (t === "light") document.documentElement.classList.add("pre-light"); })();
@@ -76,7 +76,7 @@
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
           <div class="lm">
-  <img src="img/favIcon/favicon_sushi_32.png" alt="Mi Local Sushi Logo">
+  <img src="img/logos/logo-fondo%20transparente.png" alt="Mi Local Sushi Logo">
 </div>
           Mi Local Sushi
         </a>
@@ -229,17 +229,11 @@
         <div class="ey">En detalle</div>
         <h2 class="sh2">Profundiza en cada<br><em>funcionalidad</em></h2>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:52px" class="rv d1">
-        <a href="pedidos.html"
-          style="display:block;background:var(--bg2);border:1px solid var(--brd);border-radius:18px;padding:34px;transition:all .25s;text-decoration:none"
-          onmouseover="this.style.borderColor='rgba(5,188,169,.3)';this.style.transform='translateY(-4px)'"
-          onmouseout="this.style.borderColor='';this.style.transform=''">
+      <div class="detail-grid rv d1">
+        <a href="pedidos.html" class="detail-card">
           <div class="ey">Pedidos</div>
-          <div
-            style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--t1);margin-bottom:10px;line-height:1.2">
-            Gestión de pedidos en tiempo real</div>
-          <p style="font-size:13.5px;color:var(--t3);line-height:1.65;margin-bottom:18px">Mesa, delivery y mostrador
-            desde un panel. Sin errores ni demoras.</p>
+          <div class="detail-card-title">Gestión de pedidos en tiempo real</div>
+          <p class="detail-card-desc">Mesa, delivery y mostrador desde un panel. Sin errores ni demoras.</p>
           <div class="ss">
             <div class="ss-ph" style="aspect-ratio:16/7"><svg viewBox="0 0 48 48">
                 <rect x="4" y="6" width="40" height="36" rx="4" />
@@ -250,16 +244,10 @@
             </div>
           </div>
         </a>
-        <a href="cocina.html"
-          style="display:block;background:var(--bg2);border:1px solid var(--brd);border-radius:18px;padding:34px;transition:all .25s;text-decoration:none"
-          onmouseover="this.style.borderColor='rgba(5,188,169,.3)';this.style.transform='translateY(-4px)'"
-          onmouseout="this.style.borderColor='';this.style.transform=''">
+        <a href="cocina.html" class="detail-card">
           <div class="ey">Cocina</div>
-          <div
-            style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--t1);margin-bottom:10px;line-height:1.2">
-            Panel de cocina sin papel</div>
-          <p style="font-size:13.5px;color:var(--t3);line-height:1.65;margin-bottom:18px">Pantalla dedicada. Los pedidos
-            llegan al instante con estados claros.</p>
+          <div class="detail-card-title">Panel de cocina sin papel</div>
+          <p class="detail-card-desc">Pantalla dedicada. Los pedidos llegan al instante con estados claros.</p>
           <div class="ss">
             <div class="ss-ph" style="aspect-ratio:16/7"><svg viewBox="0 0 48 48">
                 <path d="M4 14h40v22a4 4 0 01-4 4H8a4 4 0 01-4-4V14z" />
@@ -269,16 +257,10 @@
             </div>
           </div>
         </a>
-        <a href="equipo.html"
-          style="display:block;background:var(--bg2);border:1px solid var(--brd);border-radius:18px;padding:34px;transition:all .25s;text-decoration:none"
-          onmouseover="this.style.borderColor='rgba(5,188,169,.3)';this.style.transform='translateY(-4px)'"
-          onmouseout="this.style.borderColor='';this.style.transform=''">
+        <a href="equipo.html" class="detail-card">
           <div class="ey">Equipo</div>
-          <div
-            style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--t1);margin-bottom:10px;line-height:1.2">
-            Gestión de equipo y roles</div>
-          <p style="font-size:13.5px;color:var(--t3);line-height:1.65;margin-bottom:18px">Roles, turnos y accesos. Cada
-            persona ve solo lo que necesita.</p>
+          <div class="detail-card-title">Gestión de equipo y roles</div>
+          <p class="detail-card-desc">Roles, turnos y accesos. Cada persona ve solo lo que necesita.</p>
           <div class="ss">
             <div class="ss-ph" style="aspect-ratio:16/7"><svg viewBox="0 0 48 48">
                 <circle cx="18" cy="14" r="7" />
@@ -289,15 +271,10 @@
             </div>
           </div>
         </a>
-        <a href="planes.html"
-          style="display:block;background:var(--gl);border:1px solid rgba(5,188,169,.2);border-radius:18px;padding:34px;transition:all .25s;text-decoration:none"
-          onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <a href="planes.html" class="detail-card detail-card-cta">
           <div class="ey">Reportes</div>
-          <div
-            style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--t1);margin-bottom:10px;line-height:1.2">
-            Métricas y reportes de ventas</div>
-          <p style="font-size:13.5px;color:var(--t3);line-height:1.65;margin-bottom:26px">Datos diarios y semanales.
-            Entiende qué vende más, cuándo y cuánto ganas.</p>
+          <div class="detail-card-title">Métricas y reportes de ventas</div>
+          <p class="detail-card-desc" style="margin-bottom:26px">Datos diarios y semanales. Entiende qué vende más, cuándo y cuánto ganas.</p>
           <div class="btn-primary" style="display:inline-flex">Ver planes y precios <svg viewBox="0 0 16 16" fill="none"
               stroke="white" stroke-width="2.2" stroke-linecap="round">
               <path d="M3 8h10M9 4l4 4-4 4" />

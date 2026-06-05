@@ -2759,6 +2759,76 @@ body.light .nl-f input::placeholder {
 }
 
 /* ═══════════════════════════════════════
+   GRID: EN DETALLE (funciones.html)
+════════════════════════════════════════ */
+.detail-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 28px;
+   margin-top: 52px;
+}
+
+.detail-card {
+   display: block;
+   background: var(--bg2);
+   border: 1px solid var(--brd);
+   border-radius: 18px;
+   padding: 34px;
+   transition: border-color .25s, transform .25s;
+   text-decoration: none;
+}
+
+.detail-card:hover {
+   border-color: rgba(5, 188, 169, .3);
+   transform: translateY(-4px);
+}
+
+.detail-card-cta {
+   background: var(--gl);
+   border-color: rgba(5, 188, 169, .2);
+}
+
+.detail-card-title {
+   font-family: 'DM Serif Display', serif;
+   font-size: 22px;
+   color: var(--t1);
+   margin-bottom: 10px;
+   line-height: 1.2;
+}
+
+.detail-card-desc {
+   font-size: 13.5px;
+   color: var(--t3);
+   line-height: 1.65;
+   margin-bottom: 18px;
+}
+
+/* ═══════════════════════════════════════
+   GRIDS: EL PROBLEMA + SEGURIDAD
+════════════════════════════════════════ */
+.prob-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 18px;
+   margin-top: 52px;
+}
+
+.sec-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1px;
+   background: var(--brd);
+   border-radius: 22px;
+   overflow: hidden;
+   margin-top: 52px;
+}
+
+.sec-cell {
+   background: var(--bg1);
+   padding: 38px 34px;
+}
+
+/* ═══════════════════════════════════════
    RESPONSIVE MOBILE FIRST
 ════════════════════════════════════════ */
 @media(max-width:1100px) {
@@ -2843,6 +2913,15 @@ body.light .nl-f input::placeholder {
    .metrics-grid {
       grid-template-columns: repeat(2, 1fr)
    }
+
+   .prob-grid {
+      grid-template-columns: 1fr
+   }
+
+   .sec-grid {
+      grid-template-columns: 1fr;
+      border-radius: 18px
+   }
 }
 
 @media(max-width:768px) {
@@ -2895,6 +2974,19 @@ body.light .nl-f input::placeholder {
       grid-template-columns: 1fr
    }
 
+   .detail-grid {
+      grid-template-columns: 1fr;
+      gap: 20px
+   }
+
+   .detail-card {
+      padding: 26px 22px
+   }
+
+   .detail-card-title {
+      font-size: 19px
+   }
+
    .steps {
       grid-template-columns: 1fr
    }
@@ -2922,6 +3014,10 @@ body.light .nl-f input::placeholder {
 
    .pg-stats {
       gap: 28px
+   }
+
+   .sec-cell {
+      padding: 28px 22px
    }
 }
 
@@ -2981,6 +3077,11 @@ body.light .nl-f input::placeholder {
 
    .metric {
       padding: 28px 20px
+   }
+
+   .prob-grid,
+   .sec-grid {
+      margin-top: 36px
    }
 
    .metric-n {

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's|img/favIcon/favicon\\\\.ico|img/logos/faiicon.png|g' c:/Users/elise/Documents/GitHub/mls-final/__TRACKED_VAR__)",
+      "Bash(echo \"Done\")"
+    ]
+  }
+}
