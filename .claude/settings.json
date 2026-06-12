@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(sed -i 's|img/favIcon/favicon\\\\.ico|img/logos/faiicon.png|g' c:/Users/elise/Documents/GitHub/mls-final/__TRACKED_VAR__)",
-      "Bash(echo \"Done\")"
+      "Bash(echo \"Done\")",
+      "Read(//c/Users/elise/Documents/GitHub/dashborad-angular-free/**)",
+      "Bash(curl -v --max-time 60 \"https://solucionaya-yie0.onrender.com/planes/activos\")"
     ]
   }
 }

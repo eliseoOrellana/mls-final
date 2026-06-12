@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap');
-
 *,
 *::before,
 *::after {
@@ -242,22 +240,6 @@ body {
 
 #theme-btn:hover svg {
    stroke: var(--g)
-}
-
-.icon-moon {
-   display: block
-}
-
-.icon-sun {
-   display: none
-}
-
-body.light .icon-moon {
-   display: none
-}
-
-body.light .icon-sun {
-   display: block
 }
 
 /* ═══════════════════════════════════════
@@ -1463,15 +1445,6 @@ body.light .h-img {
 
 /* img bento*/
 
-/* contenedor */
-.bento-ss {
-   margin-top: 18px;
-   border-radius: 12px;
-   overflow: hidden;
-   border: 1px solid var(--brd);
-   background: var(--bg1);
-}
-
 /* imagen */
 
 .bento-img {
@@ -1495,31 +1468,23 @@ body.light .b1 .bento-img {
 }
 
 /*  bento b2 */
-/* contenedor */
 .b2-img {
    margin-top: 14px;
    border-radius: 10px;
    overflow: hidden;
    border: 1px solid var(--brd);
    background: var(--bg1);
-
-   height: 180px;
+   height: clamp(200px, 22vw, 250px);
    display: flex;
    align-items: center;
    justify-content: center;
 }
 
-/* imagen */
 .b2-img img {
    width: 100%;
    height: 100%;
    object-fit: cover;
    object-position: top;
-   /* muestra mejor dashboards */
-}
-
-.b2-img {
-   height: clamp(200px, 22vw, 250px);
 }
 
 /* DARK */
@@ -1989,6 +1954,61 @@ body.light .b2-img img {
    border: 1px solid var(--gl2);
    padding: 3px 11px;
    border-radius: 99px
+}
+
+/* ═══════════════════════════════════════
+   FREQUENCY TOGGLE (planes.html)
+════════════════════════════════════════ */
+.freq-toggle {
+   display: flex;
+   gap: 8px;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin: 32px 0 52px
+}
+
+.freq-btn {
+   font-family: 'DM Sans', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   padding: 9px 22px;
+   border-radius: 99px;
+   border: 1.5px solid var(--brd3);
+   background: transparent;
+   color: var(--t3);
+   cursor: pointer;
+   transition: all .2s;
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   line-height: 1
+}
+
+.freq-btn:hover {
+   border-color: var(--g);
+   color: var(--t1)
+}
+
+.freq-btn.active {
+   background: var(--g);
+   border-color: var(--g);
+   color: #fff;
+   box-shadow: 0 0 18px rgba(5, 188, 169, .3)
+}
+
+.freq-badge {
+   font-size: 10px;
+   font-weight: 700;
+   background: rgba(255, 255, 255, .22);
+   padding: 2px 7px;
+   border-radius: 99px;
+   letter-spacing: .03em
+}
+
+.freq-btn:not(.active) .freq-badge {
+   background: var(--gl);
+   color: var(--g)
 }
 
 .plans {
@@ -2936,7 +2956,7 @@ body.light .nl-f input::placeholder {
    }
 
    .sec-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       border-radius: 18px
    }
 }
@@ -2951,10 +2971,6 @@ body.light .nl-f input::placeholder {
    .nav-links,
    .nav-cta {
       display: none
-   }
-
-   .burger {
-      display: flex
    }
 
    #theme-btn {
@@ -3098,7 +3114,8 @@ body.light .nl-f input::placeholder {
 
    .prob-grid,
    .sec-grid {
-      margin-top: 36px
+      margin-top: 36px;
+      grid-template-columns: 1fr
    }
 
    .metric-n {
@@ -3127,12 +3144,12 @@ body.light .nl-f input::placeholder {
 .icon-sun {
    opacity: 0;
    transform: scale(.6);
-   transition: all .3s ease;
+   transition: opacity .3s ease, transform .3s ease;
 }
 
 .icon-moon {
    opacity: 1;
-   transition: all .3s ease;
+   transition: opacity .3s ease;
 }
 
 body.light .icon-sun {
@@ -3142,6 +3159,104 @@ body.light .icon-sun {
 
 body.light .icon-moon {
    opacity: 0;
+}
+
+/* ═══════════════════════════════════════
+   FOOTER LOGO
+════════════════════════════════════════ */
+.footer-logo-wrap {
+   position: relative;
+   width: 140px;
+   height: 93px;
+   margin-bottom: 16px;
+}
+
+.footer-logo-wrap .nav-logo-img {
+   object-position: left center;
+}
+
+/* ═══════════════════════════════════════
+   FOCUS VISIBLE — ACCESIBILIDAD
+════════════════════════════════════════ */
+:focus-visible {
+   outline: 2px solid var(--g);
+   outline-offset: 3px;
+   border-radius: 4px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+   outline: none;
+}
+
+/* ═══════════════════════════════════════
+   SOCIAL LINKS PLACEHOLDER
+════════════════════════════════════════ */
+.fs[href="#"] {
+   opacity: 0.35;
+   pointer-events: none;
+   cursor: not-allowed;
+}
+
+/* ═══════════════════════════════════════
+   MENU BTN — cursor
+════════════════════════════════════════ */
+.menu-btn label {
+   cursor: pointer;
+}
+
+/* ═══════════════════════════════════════
+   PREFERS REDUCED MOTION
+════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+   html {
+      scroll-behavior: auto;
+   }
+
+   .rv {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+   }
+
+   .h-aurora,
+   .h-aurora2 {
+      animation: none;
+   }
+
+   .h-app {
+      animation: none;
+   }
+
+   .pre-fill {
+      animation: none;
+      width: 100%;
+   }
+
+   .pre-logo {
+      animation: none;
+      opacity: 1;
+      transform: none;
+   }
+
+   .btn-primary,
+   .btn-ghost,
+   .nav-cta,
+   .bento-card,
+   .tc,
+   .plan {
+      transition: none;
+   }
+}
+
+/* ═══════════════════════════════════════
+   RV FALLBACK (JS off o no soportado)
+════════════════════════════════════════ */
+@supports not (selector(:is(*))) {
+   .rv {
+      opacity: 1;
+      transform: none;
+   }
 }
 
 @media (max-width: 900px) {

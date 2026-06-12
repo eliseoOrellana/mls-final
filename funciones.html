@@ -14,16 +14,23 @@
     <link rel="icon" type="image/png" href="img/logos/faiicon.png">
   <link rel="apple-touch-icon" href="img/logos/faiicon.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="canonical" href="https://milocalsushi.onrender.com/funciones.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Funciones — Mi Local Sushi">
+  <meta property="og:description" content="Pedidos en tiempo real, panel de cocina, gestión de equipo y reportes. Todo en un solo panel para tu restaurante de sushi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milocalsushi.onrender.com/funciones.html">
+  <meta property="og:image" content="https://milocalsushi.onrender.com/img/logos/milocal_sushi_identico_2.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:locale" content="es_CL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Funciones — Mi Local Sushi">
+  <meta name="twitter:description" content="Pedidos en tiempo real, panel de cocina, gestión de equipo y reportes. Todo en un solo panel para tu restaurante de sushi.">
+  <meta name="twitter:image" content="https://milocalsushi.onrender.com/img/logos/milocal_sushi_identico_2.png">
   <script>
-    (function () { var t = localStorage.getItem("mls-theme") || "dark"; if (t === "light") document.documentElement.classList.add("pre-light"); })();
-  </script>
-  <script>
-    (function () {
-      const theme = localStorage.getItem("theme");
-      if (theme === "light") {
-        document.documentElement.classList.add("light");
-      }
-    })();
+    (function(){if(localStorage.getItem('mls-theme')==='light')document.documentElement.classList.add('light');})();
   </script>
 </head>
 
@@ -119,7 +126,7 @@
       </div>
     </div>
   </nav>
-
+<main>
   <section class="pg-hero" style="text-align:center">
     <div class="h-grid" style="opacity:.3"></div>
     <div class="pg-glow"></div>
@@ -309,18 +316,17 @@
       </div>
     </div>
   </section>
+  </main>
   <footer>
     <div class="W">
       <div class="fg">
         <div>
-          <div class="fl">
-            <div class="lm"><svg viewBox="0 0 18 18">
-                <circle cx="9" cy="9" r="7" fill="none" stroke="white" stroke-width="1.5" />
-                <path d="M5 9 Q9 5 13 9 Q9 13 5 9Z" fill="white" />
-              </svg></div>Mi Local Sushi
+          <div class="footer-logo-wrap">
+            <img src="img/logos/milocal_sushi_identico_2.png" alt="Mi Local Sushi" class="nav-logo-img nav-logo-dark">
+            <img src="img/logos/milocal_sushi_identico_1.png" alt="Mi Local Sushi" class="nav-logo-img nav-logo-light">
           </div>
           <p class="fd">Software de gestión para restaurantes chilenos.</p>
-          <div class="fct"><a href="mailto:milocalsushi@gmail.com" style="color:rgba(255,255,255,.25);text-decoration:none;font-size:13px">milocalsushi@gmail.com</a></div>
+          <div class="fct"><a href="mailto:milocalsushi@gmail.com" style="color:var(--t4);text-decoration:none;transition:color .2s;font-size:13px">milocalsushi@gmail.com</a></div>
         </div>
         <div class="fcol">
           <h5>Plataforma</h5><a href="funciones.html">Funciones</a><a href="pedidos.html">Pedidos</a><a
@@ -337,11 +343,7 @@
         </div>
       </div>
       <div class="fbot"><span class="fcp">© 2026 Mi Local Sushi · Desarrollado por <span style="font-weight:700;letter-spacing:-0.5px;color:#6b7280;">Singularity<span style="color:#4ea8f7;">Code</span></span> SpA · Chile</span>
-        <div class="fsoc">
-          <div class="fs">IG</div>
-          <div class="fs">FB</div>
-          <div class="fs">in</div>
-        </div>
+        <div class="fsoc"><a class="fs" href="#" title="Instagram"><i class="ti ti-brand-instagram"></i></a><a class="fs" href="#" title="Facebook"><i class="ti ti-brand-facebook"></i></a><a class="fs" href="#" title="LinkedIn"><i class="ti ti-brand-linkedin"></i></a><a class="fs" href="#" title="X / Twitter"><i class="ti ti-brand-x"></i></a></div>
       </div>
     </div>
   </footer>

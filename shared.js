@@ -11,7 +11,6 @@ function applyTheme(t){
 function getTheme(){return localStorage.getItem(THEME_KEY)||'dark';}
 function toggleTheme(){applyTheme(document.body.classList.contains('light')?'dark':'light');}
 
-// apply immediately before render to avoid flash
 applyTheme(getTheme());
 
 // ── DOM READY ────────────────────────────────────────────────────────
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(function(){
       var p=document.getElementById('pre');
       if(p)p.classList.add('out');
-    },900);
+    },400);
   });
 
   // ── NAV STICKY ────────────────────────────────────────────────────
@@ -39,13 +38,19 @@ document.addEventListener('DOMContentLoaded',function(){
   updateNav();
 
   // ── MOBILE MENU ───────────────────────────────────────────────────
+  var toggle=document.getElementById('menu-toggle');
   var mobNav=document.getElementById('mobNav');
-  window.toggleMob=function(){
-    if(mobNav)mobNav.classList.toggle('open');
-  };
   window.closeMob=function(){
+    if(toggle)toggle.checked=false;
     if(mobNav)mobNav.classList.remove('open');
+    document.body.style.overflow='';
   };
+  if(toggle&&mobNav){
+    toggle.addEventListener('change',function(){
+      mobNav.classList.toggle('open',toggle.checked);
+      document.body.style.overflow=toggle.checked?'hidden':'';
+    });
+  }
 
   // ── SMOOTH SCROLL ─────────────────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
@@ -59,10 +64,14 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 
   // ── REVEAL ON SCROLL ──────────────────────────────────────────────
-  var ro=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
-  },{threshold:0.08});
-  document.querySelectorAll('.rv').forEach(function(el){ro.observe(el);});
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  } else {
+    var ro=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
+    },{threshold:0.08});
+    document.querySelectorAll('.rv').forEach(function(el){ro.observe(el);});
+  }
 
   // ── FAQ ACCORDION ─────────────────────────────────────────────────
   document.querySelectorAll('.fq').forEach(function(el){
@@ -73,19 +82,6 @@ document.addEventListener('DOMContentLoaded',function(){
       if(!wasOpen)item.classList.add('open');
     });
   });
-
-  // ── PRICING TOGGLE ────────────────────────────────────────────────
-  var isAnnual=false;
-  var togT=document.getElementById('togT');
-  if(togT){
-    togT.addEventListener('click',function(){
-      isAnnual=!isAnnual;
-      togT.classList.toggle('on',isAnnual);
-      document.querySelectorAll('.pamt').forEach(function(el){
-        el.textContent=isAnnual?el.dataset.a:el.dataset.m;
-      });
-    });
-  }
 
   // ── ACTIVE NAV LINK ───────────────────────────────────────────────
   var pg=window.location.pathname.split('/').pop()||'index.html';
@@ -138,21 +134,27 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(type,1200);
   }
 
-  var toggle = document.getElementById("menu-toggle");
-var mobNav = document.getElementById("mobNav");
-
-if (toggle && mobNav) {
-  toggle.addEventListener("change", function () {
-    mobNav.classList.toggle("open", toggle.checked);
-    document.body.style.overflow = toggle.checked ? "hidden" : "";
+  // ── NEWSLETTER ────────────────────────────────────────────────────
+  document.querySelectorAll('.nl-f').forEach(function(form){
+    var input=form.querySelector('input[type="email"]');
+    var btn=form.querySelector('button');
+    if(!input||!btn)return;
+    btn.addEventListener('click',function(){
+      var val=input.value.trim();
+      if(!val||!/.+@.+\..+/.test(val)){
+        input.style.outline='2px solid rgba(239,68,68,.65)';
+        input.focus();
+        setTimeout(function(){input.style.outline='';},1800);
+        return;
+      }
+      input.disabled=true;
+      btn.disabled=true;
+      btn.textContent='✓ Suscrito';
+      btn.style.background='var(--g)';
+      btn.style.color='#fff';
+      input.value='';
+    });
   });
-
-  window.closeMob = function () {
-    toggle.checked = false;
-    mobNav.classList.remove("open");
-    document.body.style.overflow = "";
-  };
-}
 
 });
 })();
