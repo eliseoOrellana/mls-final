@@ -193,47 +193,84 @@
   <section class="sec" style="background:var(--bg1);border-top:1px solid var(--brd)">
     <div class="W">
       <div class="ctr rv">
-        <div class="ey">El problema</div>
-        <h2 class="sh2">¿Te suena familiar?</h2>
-        <p class="sp">Así opera la mayoría de los restaurantes de sushi antes de digitalizarse.</p>
+        <div class="ey">¿Te suena familiar?</div>
+        <h2 class="sh2">Los problemas que frenan<br><em>a tu restaurante cada día</em></h2>
+        <p class="sp">Cada tarjeta muestra el problema real y cómo Mi Local Sushi lo elimina.</p>
       </div>
       <div class="prob-grid rv d1">
-        <div style="background:var(--bg2);border:1px solid rgba(239,68,68,.18);border-radius:18px;padding:28px;position:relative;overflow:hidden">
-          <div class="bento-ic" style="background:rgba(239,68,68,.1);margin-bottom:18px">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(239,68,68,.85)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              <line x1="9" y1="10" x2="15" y2="10"/>
-              <line x1="9" y1="14" x2="12" y2="14"/>
-            </svg>
+
+        <!-- Card 1 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">El garzón anota mal, la cocina hace otra cosa y el cliente recibe un pedido equivocado.</p>
           </div>
-          <div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--t1);margin-bottom:10px;line-height:1.2">Pedidos por WhatsApp</div>
-          <p style="font-size:14px;color:var(--t3);line-height:1.7">Mensajes perdidos, pedidos duplicados, la cocina preguntando qué pidió la mesa 4 hace 20 minutos.</p>
-        </div>
-        <div style="background:var(--bg2);border:1px solid rgba(239,68,68,.18);border-radius:18px;padding:28px">
-          <div class="bento-ic" style="background:rgba(239,68,68,.1);margin-bottom:18px">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(239,68,68,.85)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="8" y1="13" x2="16" y2="13"/>
-              <line x1="8" y1="17" x2="11" y2="17"/>
-            </svg>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">El pedido llega exacto a la pantalla de cocina — modificaciones, alergias y todo — sin papel de por medio.</p>
           </div>
-          <div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--t1);margin-bottom:10px;line-height:1.2">Comandas en papel</div>
-          <p style="font-size:14px;color:var(--t3);line-height:1.7">Una hoja ilegible, un garzón que no volvió a la cocina y un cliente esperando 40 minutos su pedido.</p>
         </div>
-        <div style="background:var(--bg2);border:1px solid rgba(239,68,68,.18);border-radius:18px;padding:28px">
-          <div class="bento-ic" style="background:rgba(239,68,68,.1);margin-bottom:18px">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(239,68,68,.85)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
-              <line x1="1" y1="1" x2="23" y2="23"/>
-            </svg>
+
+        <!-- Card 2 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">Nadie sabe cuánto demora la cocina. Los garzones inventan tiempos y los clientes se impacientan.</p>
           </div>
-          <div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--t1);margin-bottom:10px;line-height:1.2">Sin visibilidad del negocio</div>
-          <p style="font-size:14px;color:var(--t3);line-height:1.7">Cierras el día sin saber qué vendiste, qué se agotó ni cuánto te costó la operación real.</p>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">Cronómetro por pedido con semáforo verde / amarillo / rojo y promedios históricos visibles en tiempo real.</p>
+          </div>
         </div>
-      </div>
-      <div class="ctr rv d2" style="margin-top:44px">
-        <p style="font-size:18px;color:var(--t2);font-weight:500;line-height:1.6">Mi Local Sushi <em style="background:linear-gradient(135deg,var(--g),#00d4bf);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">resuelve los tres</em> desde el primer día.</p>
+
+        <!-- Card 3 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">El delivery es un caos: repartidores sin asignar, efectivo sin cuadrar y clientes sin saber dónde está su pedido.</p>
+          </div>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">Asignación de repartidor con un clic, seguimiento de estado y cuadre automático al cierre del turno.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">Cerrar caja toma 40 minutos: sumar propinas a mano, separar medios de pago, cuadrar con lo del papel.</p>
+          </div>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">Resumen automático por medio de pago y propinas. Un clic y tienes el informe del turno listo para descargar.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">No sabes qué platos venden más, qué días son los mejores ni cuánto ganaste realmente este mes.</p>
+          </div>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">Panel de ventas con gráficos diarios, semanales y por producto. Toda la data sin exportar ni esperar.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="prob-card">
+          <div class="prob-pain">
+            <span class="prob-x">✕</span>
+            <p class="prob-pain-txt">Todo el equipo entra a todo: los garzones a caja, el cajero a cocina, y nadie responde por nada.</p>
+          </div>
+          <div class="prob-sol">
+            <span class="prob-v">✓</span>
+            <p class="prob-sol-txt">Roles y permisos por persona. Cada uno ve y hace solo lo que le corresponde, sin excepciones.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -567,11 +604,11 @@
   <section class="sec" style="background:var(--bg0);border-top:1px solid var(--brd)">
     <div class="W">
       <div class="ctr rv">
-        <div class="ey">Seguridad y privacidad</div>
-        <h2 class="sh2">Tus datos y los de tus<br><em>clientes, siempre protegidos</em></h2>
-        <p class="sp">Diseñado en cumplimiento con la Ley 21.719 de Protección de Datos Personales de Chile.</p>
+        <div class="ey">Tus datos, protegidos</div>
+        <h2 class="sh2">La nueva ley ya te aplica.<br><em>Nosotros ya cumplimos.</em></h2>
+        <p class="sp">En diciembre de 2026 entra en plena vigencia la Ley 21.719 de Protección de Datos Personales. Si guardas nombres, teléfonos o direcciones de tus clientes — y todo restaurante con delivery lo hace — la ley te exige protegerlos. Mi Local Sushi ya cumple.</p>
       </div>
-      <div class="sec-grid rv d1" style="grid-template-columns:repeat(3,1fr)">
+      <div class="sec-grid rv d1">
         <div class="sec-cell">
           <div class="bento-ic" style="margin-bottom:18px">
             <svg viewBox="0 0 24 24" stroke="var(--g)" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
