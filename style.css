@@ -282,7 +282,7 @@ body.light .icon-sun {
 .nav-inner {
    display: flex;
    align-items: center;
-   height: 70px;
+   height: 128px;
    gap: 8px
 }
 
@@ -319,6 +319,27 @@ body.light #nav:not(.solid) .nav-logo {
    padding: 4px;
    /* opcional: aire interno pro */
 }
+
+.nav-logo-wrap {
+   position: relative;
+   width: 180px;
+   height: 120px;
+   flex-shrink: 0;
+}
+.nav-logo-img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   object-position: left center;
+   transition: opacity .25s ease;
+}
+.nav-logo-dark  { opacity: 1; }
+.nav-logo-light { opacity: 0; }
+body.light .nav-logo-dark  { opacity: 0; }
+body.light .nav-logo-light { opacity: 1; }
 
 .lm img {
    width: 100%;
@@ -409,23 +430,19 @@ body.light #nav:not(.solid) .nl:hover {
 }
 
 .menu-btn label {
-   width: 38px;
-   height: 38px;
+   width: 44px;
+   height: 44px;
    border-radius: 999px;
-
    background: var(--gl);
-   /* fondo verde suave */
    border: 1px solid var(--gl2);
-   /* borde verde */
-
    display: flex;
    align-items: center;
    justify-content: center;
 }
 
 .menu-btn svg {
-   width: 100%;
-   height: 100%;
+   width: 38px;
+   height: 38px;
 }
 
 /* BASE */
@@ -3136,5 +3153,14 @@ body.light .icon-moon {
 
    .menu-btn {
       display: block;
+   }
+
+   .nav-inner {
+      height: 124px;
+   }
+
+   .nav-logo-wrap {
+      width: 168px;
+      height: 112px;
    }
 }
