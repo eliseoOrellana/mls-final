@@ -1539,14 +1539,16 @@ body.light .b2-img img {
    font-family: 'DM Serif Display', serif;
    font-size: 24px;
    color: var(--t4);
-   transition: all .3s
+   transition: all .3s;
+   position: relative;
+   z-index: 2
 }
 
 .step:hover .step-n {
-   background: var(--gl);
-   border-color: rgba(0, 212, 192, .4);
+   background: var(--bg2);
+   border-color: rgba(77, 143, 255, .50);
    color: var(--g);
-   box-shadow: 0 0 22px rgba(0, 212, 192, .2)
+   box-shadow: 0 0 0 5px rgba(77, 143, 255, .08), 0 0 24px rgba(77, 143, 255, .28), inset 0 0 20px rgba(77, 143, 255, .10)
 }
 
 .step-t {
@@ -2839,6 +2841,104 @@ body.light .nl-f input::placeholder {
 }
 
 /* ═══════════════════════════════════════
+   BILLING TIMELINE
+════════════════════════════════════════ */
+.billing-timeline {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+   margin-top: 56px;
+   position: relative
+}
+
+
+.bt-step {
+   display: flex;
+   gap: 28px;
+   align-items: flex-start;
+   padding: 28px 0;
+   position: relative
+}
+
+/* separador horizontal que arranca tras el ícono, no lo cruza */
+.bt-step:not(:last-child)::before {
+   content: '';
+   position: absolute;
+   left: 84px; /* 56px ícono + 28px gap */
+   right: 0;
+   bottom: 0;
+   height: 1px;
+   background: var(--brd)
+}
+
+/* conector entre ícono inferior y el ícono del paso siguiente */
+.bt-step:not(:last-child)::after {
+   content: '';
+   position: absolute;
+   left: 27px;
+   top: 84px;    /* 28px padding + 56px ícono = justo bajo el ícono */
+   bottom: -28px; /* cruza el padding inferior + el padding superior del sig. paso */
+   width: 2px;
+   background: linear-gradient(
+      to bottom,
+      rgba(77, 143, 255, .45),
+      rgba(77, 143, 255, .10)
+   );
+   border-radius: 99px
+}
+
+.bt-icon {
+   width: 56px;
+   height: 56px;
+   border-radius: 14px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   position: relative;
+   z-index: 1
+}
+
+.bt-body {
+   flex: 1;
+   padding-top: 4px
+}
+
+.bt-label {
+   font-size: 11px;
+   font-weight: 700;
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   color: var(--t4);
+   margin-bottom: 6px
+}
+
+.bt-title {
+   font-family: 'DM Serif Display', serif;
+   font-size: 18px;
+   color: var(--t1);
+   margin-bottom: 8px;
+   line-height: 1.25
+}
+
+.bt-desc {
+   font-size: 14px;
+   color: var(--t3);
+   line-height: 1.65;
+   margin-bottom: 10px
+}
+
+.bt-eg {
+   font-size: 12.5px;
+   color: var(--g);
+   background: var(--gl);
+   border: 1px solid var(--gl2);
+   border-radius: 8px;
+   padding: 7px 12px;
+   display: inline-block
+}
+
+/* ═══════════════════════════════════════
    GRIDS: EL PROBLEMA + SEGURIDAD
 ════════════════════════════════════════ */
 .prob-grid {
@@ -3173,6 +3273,20 @@ body.light .nl-f input::placeholder {
    .sec-grid {
       margin-top: 36px;
       grid-template-columns: 1fr
+   }
+
+   .billing-timeline::before {
+      left: 20px
+   }
+
+   .bt-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px
+   }
+
+   .bt-eg {
+      font-size: 12px
    }
 
    .metric-n {
