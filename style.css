@@ -264,7 +264,7 @@ body {
 .nav-inner {
    display: flex;
    align-items: center;
-   height: 128px;
+   height: 110px;
    gap: 8px
 }
 
@@ -304,8 +304,8 @@ body.light #nav:not(.solid) .nav-logo {
 
 .nav-logo-wrap {
    position: relative;
-   width: 180px;
-   height: 120px;
+   width: 320px;
+   height: 98px;
    flex-shrink: 0;
 }
 .nav-logo-img {
@@ -481,7 +481,7 @@ body.light #nav:not(.solid) .nl:hover {
    inset: 0;
    z-index: 790;
    background: var(--mob-bg);
-   padding: 86px 32px 40px;
+   padding: 122px 32px 40px;
    flex-direction: column;
    border-bottom: 1px solid var(--brd);
    overflow-y: auto;
@@ -3271,11 +3271,11 @@ a:focus:not(:focus-visible) {
    }
 
    .nav-inner {
-      height: 124px;
+      height: 100px;
    }
 
    .nav-logo-wrap {
-      width: 168px;
-      height: 112px;
+      width: 260px;
+      height: 84px;
    }
 }
